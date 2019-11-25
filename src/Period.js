@@ -3,7 +3,7 @@ const Time = require('./Time.js')
 const grades = [9, 10, 11, 12]
 
 class Period {
-  constructor ({period, start, end, selfGrades = 0}) {
+  constructor ({ period, start, end, selfGrades = 0 }) {
     this.period = period
     this.start = new Time(start)
     this.end = new Time(end)

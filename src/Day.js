@@ -1,7 +1,7 @@
 const Period = require('./Period.js')
 
 class Day {
-  constructor ({date, periods = [], alternate = false, summer = false}) {
+  constructor ({ date, periods = [], alternate = false, summer = false }) {
     this.date = new Date(date)
     this.day = this.date.getUTCDay()
     this.periods = periods.map(pd => new Period(pd))

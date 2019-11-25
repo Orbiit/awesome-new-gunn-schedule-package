@@ -10,5 +10,5 @@ module.exports = {
     filename: `awesome-new-gunn-schedule-package${production ? '.min' : ''}.js`,
     library: 'GunnSchedule',
     libraryTarget: 'umd'
-  },
+  }
 }

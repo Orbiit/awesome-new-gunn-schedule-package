@@ -1,4 +1,4 @@
-const {PASSING_PERIOD_LENGTH, defaultSelf, newLineRegex} = require('./Constants.js')
+const { PASSING_PERIOD_LENGTH, defaultSelf, newLineRegex } = require('./Constants.js')
 const NormalSchedule = require('./NormalSchedule.js')
 const Periods = require('./Periods.js')
 
@@ -13,7 +13,7 @@ const getPeriodLetterRegex = /\b[A-G]\b/
 
 const selfGradeRegex = /(1?[9012](?:\s*-\s*1?[9012])?)(?:th)?|(freshmen|sophomore|junior|senior|all)/gi
 const periodSelfGradeRegex = /self for (.+?) grade|self for (freshmen|sophomore|junior|senior|all)/gi
-const gradeToInt = {'9': 1, '10': 2, '11': 4, '12': 8, freshmen: 1, sophomore: 2, junior: 4, senior: 8, all: 15}
+const gradeToInt = { 9: 1, 10: 2, 11: 4, 12: 8, freshmen: 1, sophomore: 2, junior: 4, senior: 8, all: 15 }
 
 function getSELFGradesFrom (text) {
   let grades = 0
@@ -96,8 +96,8 @@ function parseFromEvent (summary, description) {
           // A shorter period takes place during this period
           pd._raw += '\n' + name
           // Same problems here as for the abovecase
-          const beforePart = pd.start - PASSING_PERIOD_LENGTH
-          const afterPart = pd.end + PASSING_PERIOD_LENGTH
+          const beforeEnd = pd.start - PASSING_PERIOD_LENGTH
+          const afterStart = pd.end + PASSING_PERIOD_LENGTH
           if (beforeEnd - startTime > 0) {
             endTime = beforeEnd
           } else if (endTime - afterStart > 0) {
@@ -155,10 +155,10 @@ function identifyPeriod (rawName) {
   }
   if (name.includes('SELF')) {
     return Periods.SELF
-  } else if (name.includes('FLEX')
-    || name.includes('ASSEMBL') // To match both 'assembly' and 'assemblies'
-    || name.includes('ATTEND') // Detect PSAT day (2018-10-10)
-    || name.includes('TUTORIAL')) {
+  } else if (name.includes('FLEX') ||
+    name.includes('ASSEMBL') || // To match both 'assembly' and 'assemblies'
+    name.includes('ATTEND') || // Detect PSAT day (2018-10-10)
+    name.includes('TUTORIAL')) {
     return Periods.FLEX
   } else if (name.includes('BRUNCH') || name.includes('BREAK')) {
     return Periods.BRUNCH
@@ -180,7 +180,7 @@ function parseFromEvents (events, day) {
   let selfGrades = 0
   let alternateSchedule = null
   let assumeFlexIsSELF = true
-  for (const {summary = '', description} of events) {
+  for (const { summary = '', description } of events) {
     if (summary.includes('SELF') && summary.includes('grade')) {
       const grades = getSELFGradesFrom(summary)
       if (grades > 0) {

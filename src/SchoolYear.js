@@ -1,10 +1,10 @@
-const {KEYWORDS, TIME_ZONE_OFFSET, CALENDAR_ID} = require('./Constants.js')
+const { KEYWORDS, TIME_ZONE_OFFSET, CALENDAR_ID } = require('./Constants.js')
 
 const fetch = require('node-fetch')
 const NormalSchedule = require('./NormalSchedule.js')
 const parseFromEvents = require('./Parser.js')
 const Day = require('./Day.js')
-const {toDate} = require('./utils.js')
+const { toDate } = require('./utils.js')
 
 /**
  * Converts a UTC date to the ISO string of the equivalent date in local Gunn
@@ -16,8 +16,8 @@ const {toDate} = require('./utils.js')
  * @returns {string} The ISO string of the local date/time.
  */
 function localizeDate (date, end = false) {
-  const offset = (TIME_ZONE_OFFSET - (end ? 24 : 0)) * 60 * 60 * 1000
-    - (end ? 1 : 0)
+  const offset = (TIME_ZONE_OFFSET - (end ? 24 : 0)) * 60 * 60 * 1000 -
+    (end ? 1 : 0)
   return new Date(date - offset).toISOString()
 }
 
@@ -30,7 +30,7 @@ function localizeDate (date, end = false) {
  * @param {Array.<GoogleEvent>} events.items - The event objects from the API.
  * @returns {Array.<ParserEvent>} The simpler event objects to digest. Yum!
  */
-function simplifyEvents ({items}) {
+function simplifyEvents ({ items }) {
   const events = []
   for (const event of items) {
     if (event.start.dateTime) {
@@ -66,11 +66,11 @@ class SchoolYear {
       throw new Error('wucky: Why would the last day be before the first day???')
     }
 
-    this._gCalURLBase = 'https://www.googleapis.com/calendar/v3/calendars/'
-      + encodeURIComponent(CALENDAR_ID)
-      + '/events?singleEvents=true&fields='
-      + encodeURIComponent('items(description,end(date,dateTime),start(date,dateTime),summary)')
-      + '&key=' + gunnSchedule.apiKey
+    this._gCalURLBase = 'https://www.googleapis.com/calendar/v3/calendars/' +
+      encodeURIComponent(CALENDAR_ID) +
+      '/events?singleEvents=true&fields=' +
+      encodeURIComponent('items(description,end(date,dateTime),start(date,dateTime),summary)') +
+      '&key=' + gunnSchedule.apiKey
 
     this._alternates = {}
   }
