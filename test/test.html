@@ -15,7 +15,7 @@
   </head>
   <body>
     <script>
-fetch('./api-key.json')
+fetch('../api-key.json')
   .then(r => r.json())
   .then(async ({apiKey}) => {
     const schedule = new GunnSchedule(apiKey)

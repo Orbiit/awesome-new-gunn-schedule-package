@@ -5,7 +5,7 @@
 const assert = require('assert')
 
 const GunnSchedule = require('../src/index.js')
-const { apiKey } = require('./api-key.json')
+const { apiKey } = require('../api-key.json')
 
 const firstDay = new Date('2019-08-13').getTime()
 const lastDay = new Date('2020-06-04').getTime()
