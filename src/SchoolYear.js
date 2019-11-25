@@ -1,5 +1,6 @@
 const fetch = require('node-fetch')
 const {KEYWORDS, TIME_ZONE_OFFSET, CALENDAR_ID} = require('./Constants.js')
+const parseFromEvents = require('./Parser.js')
 
 class SchoolYear {
   constructor (gunnSchedule, firstDay, lastDay) {
@@ -77,10 +78,6 @@ class SchoolYear {
       .then(events => events.map(SchoolYear.simplifyEvents))
   }
 
-  _updateDay (date) {
-    //
-  }
-
   update (firstDay, lastDay) {
     if (!lastDay) {
       if (firstDay) {
@@ -98,7 +95,18 @@ class SchoolYear {
       : Promise.all(KEYWORDS.map(keyword => this._fetchEvents(firstDay, lastDay, keyword)))
         .then(arr => [].concat(...arr)))
       .then(events => {
-        //
+        // Group the elements per day
+        const eventsByDay = {}
+        for (const event of events) {
+          if (!eventsByDay[event.date]) {
+            eventsByDay[event.date] = []
+          }
+          eventsByDay[event.date].push(event)
+        }
+        for (const [date, events] of Object.entries(eventsByDay)) {
+          const alternate = parseFromEvents(events, new Date(date).getUTCDay())
+          this._alternates[date] = alternate || null
+        }
       })
   }
 }
