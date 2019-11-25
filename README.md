@@ -10,7 +10,7 @@ npm install awesome-new-gunn-schedule-package --save
 ```
 ```js
 const GunnSchedule = require('awesome-new-gunn-schedule-package')
-const {apiKey} = require('./api-key.json')
+const { apiKey } = require('./api-key.json')
 ```
 
 For the web?
@@ -248,7 +248,7 @@ Formats the time in 12-hour (`1:01 pm`), or 24-hour (`13:01`) if `militaryTime` 
 # Development
 
 ```sh
-# Run tests
+# Run lint and tests
 npm test
 
 # Build
