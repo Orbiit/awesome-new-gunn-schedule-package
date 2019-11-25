@@ -9,6 +9,10 @@ class Day {
     this.alternate = alternate
     this.summer = summer
   }
+
+  toJSON () {
+    return this.periods.map(pd => pd.toJSON())
+  }
 }
 
 module.exports = Day

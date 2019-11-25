@@ -51,12 +51,14 @@ Day
   .school: boolean
   .alternate: boolean
   .summer: boolean
+  .toJSON(): Object[]
 
 Period
   .period: string
   .start: Time
   .end: Time
   .selfGrades: number[]
+  .toJSON(): Object
 
 Time
   .hour: number
@@ -166,6 +168,13 @@ The periods during the school day. May be empty on no-school days.
 ```
 Respectively, whether or not the school day has school, has an alternate schedule, and is outside the range of the school year that it came from (assumed to be during summer break).
 
+### Methods
+
+```ts
+.toJSON(): Object[]
+```
+Returns an array of plain object representations of each period; you can use `JSON.stringify` with this.
+
 ## `Period`
 
 Represents a period in a school day.
@@ -187,6 +196,13 @@ The start and end times of the period.
 .selfGrades: number[]
 ```
 Only for SELF periods: an array of grade level numbers possibly containing at least one of `[9, 10, 11, 12]`.
+
+### Methods
+
+```ts
+.toJSON(): Object
+```
+Returns a plain object representation of the period. `period` has the period ID, and `start` and `end` are the `totalMinutes` of the start and end times, respectively.
 
 ## `Time`
 

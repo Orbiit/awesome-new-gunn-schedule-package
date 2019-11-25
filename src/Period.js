@@ -18,6 +18,14 @@ class Period {
         .filter(grade => grade)
     }
   }
+
+  toJSON () {
+    return {
+      period: this.period,
+      start: this.start.totalMinutes,
+      end: this.end.totalMinutes
+    }
+  }
 }
 
 module.exports = Period
