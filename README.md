@@ -147,7 +147,7 @@ Contains the schedule for the school day it represents.
 ```ts
 .date: Date
 ```
-The JavaScript `Date` object representing the school day's date in UTC.
+The JavaScript `Date` object representing the school day's date in UTC; you can use UTC methods on this such as `getUTCFullYear` or `getUTCDay`.
 
 ```ts
 .day: number
@@ -216,3 +216,16 @@ The number of minutes since the beginning of the day; equivalent to `time.hour *
 ```
 
 Formats the time in 12-hour (`1:01 pm`), or 24-hour (`13:01`) if `militaryTime` is `true` (it is `false` by default).
+
+# Development
+
+```sh
+# Run tests
+npm test
+
+# Build
+npm run build
+
+# If you're on windows, you need this to be able to run prepublishOnly: (to set NODE_ENV=production)
+npm install -g win-node-env
+```

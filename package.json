@@ -4,7 +4,9 @@
   "description": "Uses the Google Calendar API to obtain the up-to-date alternate schedules for Gunn High School according to the events on their website.",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "build": "webpack",
+    "prepublishOnly": "npm test && NODE_ENV=production npm run build"
   },
   "keywords": [
     "schedule",
@@ -17,6 +19,19 @@
     "node-fetch": "^2.6.0"
   },
   "devDependencies": {
-    "mocha": "^6.2.2"
-  }
+    "mocha": "^6.2.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Orbiit/awesome-new-gunn-schedule-package.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Orbiit/awesome-new-gunn-schedule-package/issues"
+  },
+  "homepage": "https://github.com/Orbiit/awesome-new-gunn-schedule-package#readme"
 }

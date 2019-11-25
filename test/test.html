@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Package tester</title>
+    <meta name="description" content="UMDs and things"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <script src="../dist/awesome-new-gunn-schedule-package.js" charset="utf-8"></script>
+    <style media="screen">
+      body {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+fetch('./api-key.json')
+  .then(r => r.json())
+  .then(async ({apiKey}) => {
+    const schedule = new GunnSchedule(apiKey)
+    const year = schedule.year(Date.UTC(2019, 7, 13), Date.UTC(2020, 5, 4))
+    await year.update()
+    console.log(year)
+  })
+    </script>
+  </body>
+</html>
