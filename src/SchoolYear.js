@@ -4,6 +4,7 @@ const fetch = require('node-fetch')
 const NormalSchedule = require('./NormalSchedule.js')
 const parseFromEvents = require('./Parser.js')
 const Day = require('./Day.js')
+const {toDate} = require('./utils.js')
 
 /**
  * Converts a UTC date to the ISO string of the equivalent date in local Gunn
@@ -59,8 +60,8 @@ function simplifyEvents ({items}) {
 class SchoolYear {
   constructor (gunnSchedule, firstDay, lastDay) {
     this._gunnSchedule = gunnSchedule
-    this.firstDay = firstDay
-    this.lastDay = lastDay
+    this.firstDay = toDate(firstDay)
+    this.lastDay = toDate(lastDay)
 
     this._gCalURLBase = 'https://www.googleapis.com/calendar/v3/calendars/'
       + encodeURIComponent(CALENDAR_ID)
@@ -81,9 +82,17 @@ class SchoolYear {
       .then(simplifyEvents)
   }
 
+  /**
+   * No params: it'll fetch the entire school year. One param: it'll fetch just
+   * that day. Two params: it'll fetch the days between the two days.
+   */
   update (firstDay, lastDay) {
-    if (!lastDay) {
+    if (lastDay) {
+      firstDay = toDate(firstDay)
+      lastDay = toDate(lastDay)
+    } else {
       if (firstDay) {
+        firstDay = toDate(firstDay)
         lastDay = firstDay
       } else {
         firstDay = this.firstDay
@@ -114,7 +123,7 @@ class SchoolYear {
   }
 
   get (date) {
-    if (typeof date !== 'number') date = +date
+    date = toDate(date)
     if (date < this.firstDay || date > this.lastDay) {
       return new Day({
         date,
