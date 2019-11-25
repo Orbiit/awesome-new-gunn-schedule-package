@@ -73,6 +73,14 @@ describe('SchoolYear', () => {
       assert.strictEqual(self.period, GunnSchedule.Periods.SELF)
       assert.deepStrictEqual(self.selfGrades, [9, 10, 11])
     })
+    describe('Day.toJSON()', () => {
+      it('should output the correct schedule JSON that can be stringified properly', () => {
+        assert.strictEqual(
+          JSON.stringify(year.get(turkeyFeast)),
+          '[{"period":"E","start":505,"end":580},{"period":"b","start":580,"end":585},{"period":"s","start":595,"end":635},{"period":"B","start":645,"end":715},{"period":"l","start":715,"end":775},{"period":"A","start":785,"end":855},{"period":"G","start":865,"end":935}]'
+        )
+      })
+    })
   })
 
   describe('Time', async () => {
