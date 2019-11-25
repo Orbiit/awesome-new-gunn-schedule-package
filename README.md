@@ -34,6 +34,7 @@ new GunnSchedule(apiKey: string)
   .apiKey: string
   .year(firstDay: UTCDate, lastDay: UTCDate): SchoolYear
 GunnSchedule.Periods: Object
+GunnSchedule.normalSchedule(day: number): Period[]
 
 SchoolYear
   .firstDay: number
@@ -95,6 +96,13 @@ Creates a `SchoolYear` with the specified dates as the first and last days of th
 .Periods: Object
 ```
 An object of constants which are used to identify periods. For example, `GunnSchedule.Periods.A` is the name used to identify A periods.
+
+### Static methods
+
+```ts
+.normalSchedule(day: number): Period[]
+```
+Returns an array of `Period`s for the normal schedule on the given day of the week (an integer between 0 and 6).
 
 ## `SchoolYear`
 
