@@ -1,6 +1,6 @@
 {
   "name": "awesome-new-gunn-schedule-package",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Uses the Google Calendar API to obtain the up-to-date alternate schedules for Gunn High School according to the events on their website.",
   "files": [
     "src",
