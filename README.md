@@ -4,7 +4,9 @@ A Node package that gets Gunn's alternate schedules for you. It uses the Google 
 
 ## How do I use this for my own projects?
 
-Using Node or Webpack?
+You'll need a [Google Calendar API key](https://support.google.com/googleapi/answer/6158862) so it can fetch from the school's Google Calendar to generate the events.
+
+Using Node or Webpack:
 ```sh
 npm install awesome-new-gunn-schedule-package --save
 ```
@@ -13,7 +15,7 @@ const GunnSchedule = require('awesome-new-gunn-schedule-package')
 const { apiKey } = require('./api-key.json')
 ```
 
-For the web?
+For the web:
 ```html
 <script src="https://unpkg.com/awesome-new-gunn-schedule-package@1/dist/awesome-new-gunn-schedule-package.min.js" charset="utf-8"></script>
 ```
@@ -26,13 +28,11 @@ await year.update()
 console.log(year.get('2019-11-21').periods)
 ```
 
-You'll need a Google Calendar API key so it can fetch from the school's Google Calendar to generate the events.
-
 # Documentation
 
 ## UTCDate
 
-The package uses dates in UTC so time zones don't mess with things. Methods accepting "`UTCDates`" will accept milliseconds since the Unix Epoch at 00:00 UTC on the desired date or a string date in YYYY-MM-DD. Put simply, for any method that takes a "`UTCDate`," you can do:
+The package uses dates in UTC so time zones don't mess with things. Methods accepting "`UTCDates`" will accept milliseconds since the Unix Epoch at 00:00 UTC on the desired date or a string date in YYYY-MM-DD. Put simply, for any method that takes a "`UTCDate`," you can do one of the following:
 
 ```js
 someMethod(Date.UTC(2019, 6, 4))
@@ -95,7 +95,7 @@ new GunnSchedule(apiKey: string)
 ```ts
 .apiKey: string
 ```
-The Google Calendar API key given in the constructor. You can change this if you want, and future requests will use the new API key.
+The Google Calendar API key given in the constructor. You can change this if you want, and new requests made will use the new API key.
 
 ### Methods
 
@@ -135,7 +135,7 @@ The first and last days as given in the constructor, converted to the number of 
 ```ts
 .update(): Promise<void>
 ```
-Fetches and parses the alternate schedules (and SELF classes) for the entire school year.
+Fetches, parses, and stores/updates the alternate schedules (and SELF classes) for the entire school year.
 
 ```ts
 .update(date: UTCDate): Promise<void>
@@ -145,7 +145,7 @@ Like above, but it only fetches the alternate schedules for the specified day.
 ```ts
 .update(startDay: UTCDate, endDay: UTCDate): Promise<void>
 ```
-Like above, but it fetches the alternate schedules for the range between the given dates.
+Like above, but it fetches the alternate schedules in the range between the given dates.
 
 ```ts
 .get(date: UTCDate): Day
@@ -178,7 +178,7 @@ The periods during the school day. May be empty on no-school days.
 .alternate: boolean
 .summer: boolean
 ```
-Respectively, whether or not the school day has school, has an alternate schedule, and is outside the range of the school year that it came from (assumed to be during summer break).
+Respectively, whether or not the school day has school, has an alternate schedule, and is outside the range of the school year that it came from (which is assumed to be during summer break, hence the name).
 
 ### Methods
 
@@ -218,7 +218,7 @@ Returns a plain object representation of the period. `period` has the period ID,
 
 ## `Time`
 
-Represents a time during the day in local Gunn time. It is specific up to the minute.
+Represents a time during the day in minutes in local Gunn time.
 
 ### Properties
 
@@ -251,9 +251,9 @@ Formats the time in 12-hour (`1:01 pm`), or 24-hour (`13:01`) if `militaryTime` 
 # Run lint and tests
 npm test
 
-# Build
+# Build web versions using Webpack
 npm run build
 
-# If you're on windows, you need this to be able to run prepublishOnly: (to set NODE_ENV=production)
+# If you're on Windows, you need this to be able to run prepublishOnly (to set NODE_ENV=production):
 npm install -g win-node-env
 ```
