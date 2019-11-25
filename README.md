@@ -126,7 +126,7 @@ Fetches and parses the alternate schedules (and SELF classes) for the entire sch
 ```ts
 .update(date: UTCDate): Promise<void>
 ```
-Like above, but it only fetches the alternate schedules for the specified day. (This doesn't check if the dates are outside the school year.)
+Like above, but it only fetches the alternate schedules for the specified day.
 
 ```ts
 .update(startDay: UTCDate, endDay: UTCDate): Promise<void>

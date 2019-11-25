@@ -62,6 +62,9 @@ class SchoolYear {
     this._gunnSchedule = gunnSchedule
     this.firstDay = toDate(firstDay)
     this.lastDay = toDate(lastDay)
+    if (this.lastDay < this.firstDay) {
+      throw new Error('wucky: Why would the last day be before the first day???')
+    }
 
     this._gCalURLBase = 'https://www.googleapis.com/calendar/v3/calendars/'
       + encodeURIComponent(CALENDAR_ID)
@@ -99,6 +102,11 @@ class SchoolYear {
         lastDay = this.lastDay
       }
     }
+    if (lastDay < firstDay) {
+      throw new Error('wucky: Why would the end day be before the start day???')
+    }
+    if (firstDay < this.firstDay) firstDay = this.firstDay
+    if (lastDay > this.lastDay) lastDay = this.lastDay
     return (firstDay === lastDay
       ? this._fetchEvents(firstDay, lastDay)
       // If there are too many events I think Google cuts them off, and pagination
