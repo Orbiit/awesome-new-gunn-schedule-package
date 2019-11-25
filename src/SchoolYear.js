@@ -56,8 +56,8 @@ function simplifyEvents ({items}) {
 class SchoolYear {
   constructor (gunnSchedule, firstDay, lastDay) {
     this._gunnSchedule = gunnSchedule
-    this._firstDay = firstDay
-    this._lastDay = lastDay
+    this.firstDay = firstDay
+    this.lastDay = lastDay
 
     this._gCalURLBase = 'https://www.googleapis.com/calendar/v3/calendars/'
       + encodeURIComponent(CALENDAR_ID)
@@ -83,8 +83,8 @@ class SchoolYear {
       if (firstDay) {
         lastDay = firstDay
       } else {
-        firstDay = this._firstDay
-        lastDay = this._lastDay
+        firstDay = this.firstDay
+        lastDay = this.lastDay
       }
     }
     return (firstDay === lastDay
@@ -111,7 +111,7 @@ class SchoolYear {
   }
 
   get (date) {
-    if (date < this._firstDay || date > this._lastDay) {
+    if (date < this.firstDay || date > this.lastDay) {
       return new Day({
         date,
         summer: true
