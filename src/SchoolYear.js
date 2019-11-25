@@ -1,6 +1,9 @@
-const fetch = require('node-fetch')
 const {KEYWORDS, TIME_ZONE_OFFSET, CALENDAR_ID} = require('./Constants.js')
+
+const fetch = require('node-fetch')
+const NormalSchedule = require('./NormalSchedule.js')
 const parseFromEvents = require('./Parser.js')
+const Day = require('./Day.js')
 
 /**
  * Converts a UTC date to the ISO string of the equivalent date in local Gunn
@@ -12,9 +15,9 @@ const parseFromEvents = require('./Parser.js')
  * @returns {string} The ISO string of the local date/time.
  */
 function localizeDate (date, end = false) {
-  const offset = (TIME_ZONE_OFFSET + (end ? 24 : 0)) * 60 * 60 * 1000
+  const offset = (TIME_ZONE_OFFSET - (end ? 24 : 0)) * 60 * 60 * 1000
     - (end ? 1 : 0)
-  return new Date(offset).toISOString()
+  return new Date(date - offset).toISOString()
 }
 
 /**
@@ -31,19 +34,19 @@ function simplifyEvents ({items}) {
   for (const event of items) {
     if (event.start.dateTime) {
       events.push({
-        summary: ev.summary,
-        description: ev.description,
-        date: new Date(ev.start.dateTime.slice(0, 10)).getTime()
+        summary: event.summary,
+        description: event.description,
+        date: new Date(event.start.dateTime.slice(0, 10)).getTime()
       })
     } else {
       // These will be in UTC because that's how Date deals with YYYY-MM-DD
       // dates.
-      const dateObj = new Date(ev.start.date)
-      const endDate = new Date(ev.end.date).getTime()
+      const dateObj = new Date(event.start.date)
+      const endDate = new Date(event.end.date).getTime()
       while (dateObj.getTime() < endDate) {
         events.push({
-          summary: ev.summary,
-          description: ev.description,
+          summary: event.summary,
+          description: event.description,
           date: dateObj.getTime()
         })
         dateObj.setUTCDate(dateObj.getUTCDate() + 1)
@@ -75,7 +78,7 @@ class SchoolYear {
       encodeURIComponent(localizeDate(lastDay, true))
     }${keyword ? `&q=${keyword}` : ''}`)
       .then(r => r.ok ? r.json() : Promise.reject(r))
-      .then(events => events.map(simplifyEvents))
+      .then(simplifyEvents)
   }
 
   update (firstDay, lastDay) {
@@ -104,13 +107,14 @@ class SchoolYear {
           eventsByDay[event.date].push(event)
         }
         for (const [date, events] of Object.entries(eventsByDay)) {
-          const alternate = parseFromEvents(events, new Date(date).getUTCDay())
+          const alternate = parseFromEvents(events, new Date(+date).getUTCDay())
           this._alternates[date] = alternate || null
         }
       })
   }
 
   get (date) {
+    if (typeof date !== 'number') date = +date
     if (date < this.firstDay || date > this.lastDay) {
       return new Day({
         date,

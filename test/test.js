@@ -74,15 +74,21 @@ describe('SchoolYear', () => {
   })
 
   describe('Time', async () => {
-    await year.update()
-    const normalThursday = year.get(boringThursday)
+    let normalThursday
+    before(() => {
+      year = schedule.year(firstDay, lastDay)
+      return year.update()
+        .then(() => {
+          normalThursday = year.get(boringThursday)
+        })
+    })
     it('should properly format the start of a normal Thursday in 12-hour', () => {
       const firstPd = normalThursday.periods[0]
-      assert.strictEqual(firstPd.start.toTime(false), '8:25 pm')
+      assert.strictEqual(firstPd.start.toTime(false), '8:25 am')
     })
     it('should properly format the end of a normal Thursday in 24-hour', () => {
       const lastPd = normalThursday.periods[normalThursday.periods.length - 1]
-      assert.strictEqual(lastPd.end.toTime(false), '13:35')
+      assert.strictEqual(lastPd.end.toTime(true), '15:35')
     })
   })
 })

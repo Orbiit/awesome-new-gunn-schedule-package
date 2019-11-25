@@ -1,4 +1,6 @@
 const {PASSING_PERIOD_LENGTH, defaultSelf, newLineRegex} = require('./Constants.js')
+const NormalSchedule = require('./NormalSchedule.js')
+const Periods = require('./Periods.js')
 
 const HTMLnewlineRegex = /<(p|div|br).*?>|\),? *(?=[A-Z0-9])/g
 const noHTMLRegex = /<.*?>/g
@@ -28,7 +30,7 @@ function getSELFGradesFrom (text) {
   return grades
 }
 
-function parseAlternate(summary, description) {
+function parseFromEvent (summary, description) {
   if (/schedule|extended|lunch/i.test(summary)) {
     // The schedule is usually in the description, so with no description,
     // there is no schedule. Usually this happens when there's a false positive.
@@ -46,12 +48,12 @@ function parseAlternate(summary, description) {
       // Each line contains the period name and a time range; this removes the
       // time range from the line, leaving the raw period name behind.
       let times
-      let name = str.replace(timeGetterRegex, (...matches) => {
+      let name = line.replace(timeGetterRegex, (...matches) => {
         times = matches
         return ''
       }).trim()
 
-      if (!times) return
+      if (!times) continue
 
       // Key: (s|e)(H|M) = (start|end)(Hour|Minute)
       let [sH, sM, eH, eM] = times.slice(1, 5).map(Number)

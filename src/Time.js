@@ -2,11 +2,11 @@ class Time {
   constructor (totalMinutes) {
     this.totalMinutes = totalMinutes
     this.hour = Math.floor(totalMinutes / 60)
-    this.minute = totalMinutes
+    this.minute = totalMinutes % 60
   }
 
   toTime (militaryTime = false) {
-    const minutes = this.minute.padStart(2, '0')
+    const minutes = this.minute.toString().padStart(2, '0')
     if (militaryTime) {
       return `${this.hour}:${minutes}`
     } else {

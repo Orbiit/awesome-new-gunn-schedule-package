@@ -14,4 +14,6 @@ class GunnSchedule {
 
 GunnSchedule.NormalSchedule = NormalSchedule
 
+GunnSchedule.Periods = Periods
+
 module.exports = GunnSchedule

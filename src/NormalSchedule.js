@@ -1,4 +1,4 @@
-const defaultSelf = require('./Constants.js')
+const {defaultSelf} = require('./Constants.js')
 
 const NormalSchedule = [
   [],
