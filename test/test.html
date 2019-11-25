@@ -19,8 +19,9 @@ fetch('./api-key.json')
   .then(r => r.json())
   .then(async ({apiKey}) => {
     const schedule = new GunnSchedule(apiKey)
-    const year = schedule.year(Date.UTC(2019, 7, 13), Date.UTC(2020, 5, 4))
+    const year = schedule.year('2019-08-13', '2020-06-04')
     await year.update()
+    console.log(year.get('2019-11-21').periods)
     console.log(year)
   })
     </script>
