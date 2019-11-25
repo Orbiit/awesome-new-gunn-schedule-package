@@ -180,9 +180,9 @@ function parseFromEvents (events, day) {
   let assumeFlexIsSELF = true
   for (const {summary = '', description} of events) {
     if (summary.includes('SELF') && summary.includes('grade')) {
-      const grades = getSELFGrades(summary)
+      const grades = getSELFGradesFrom(summary)
       if (grades > 0) {
-        selfGrades = grades || defaultSelf
+        selfGrades = grades
         continue
       }
     }
@@ -190,7 +190,9 @@ function parseFromEvents (events, day) {
     // HACK: Prevent back-to-school schedule from overriding school schedule (2018-08-30)
     if (summary.includes('Back-to-School')) continue
 
+    // Do not parse another alternate schedule if it has already been done
     if (alternateSchedule) continue
+
     const schedule = parseFromEvent(summary, description)
     if (!schedule) continue
     if (schedule.specifiesSELF) {
