@@ -1,15 +1,25 @@
 # `awesome-new-gunn-schedule-package`
 
-How do I use this for my own projects?
+A Node package that gets Gunn's alternate schedules for you. It uses the Google Calendar API to obtain the up-to-date alternate schedules for Gunn High School according to the events on their website.
 
+## How do I use this for my own projects?
+
+Using Node or Webpack?
 ```sh
 npm install awesome-new-gunn-schedule-package --save
 ```
-
 ```js
 const GunnSchedule = require('awesome-new-gunn-schedule-package')
 const {apiKey} = require('./api-key.json')
+```
 
+For the web?
+```html
+<script src="https://unpkg.com/awesome-new-gunn-schedule-package@1/dist/awesome-new-gunn-schedule-package.min.js" charset="utf-8"></script>
+```
+
+Then in your magic JavaScript:
+```js
 const schedule = new GunnSchedule(apiKey)
 const year = schedule.year('2019-08-13', '2020-06-04')
 await year.update()
