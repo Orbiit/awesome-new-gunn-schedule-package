@@ -1,0 +1,375 @@
+[
+  {
+    "date": "2017-12-02",
+    "summary": "Semester 2 schedules online at 6pm",
+    "expect": null
+  },
+  {
+    "date": "2017-12-07",
+    "summary": "Staff Holiday Luncheon (see alt. schedule below)",
+    "description": "Period E (8:25-9:45)\nBrunch (9:45-10:00)\nFlexTime (10:00-10:45)\nPeriod B (10:55-12:00)\nStaff Holiday Lunch in Bow Gym (12:00-12:55)\nPeriod A (1:05-2:10)\nPeriod G (2:20-3:35)\n",
+    "expect": [
+      { "period": "E", "start": "8:25", "end": "9:45" },
+      { "period": "brunch", "start": "9:45", "end": "10:00" },
+      { "period": "flex", "start": "10:00", "end": "10:45" },
+      { "period": "B", "start": "10:55", "end": "12:00" },
+      { "period": "lunch", "start": "12:00", "end": "12:55" },
+      { "period": "A", "start": "13:05", "end": "14:10" },
+      { "period": "G", "start": "14:20", "end": "15:35" }
+    ]
+  },
+  {
+    "date": "2017-12-13",
+    "summary": "7-period-day schedule Review Day (no new content)",
+    "description": "Period A (8:25-9:17)\nPeriod B (9:27-10:14)\nBrunch (10:14-10:29)\nPeriod C (10:29-11:16)\nPeriod D (11:26-12:13)\nLunch (12:13-12:57)\nPeriod E (12:57-1:44)\nPeriod F (1:54-2:41)\nPeriod G (2:51-3:38)",
+    "expect": [
+      { "period": "A", "start": "8:25", "end": "9:17" },
+      { "period": "B", "start": "9:27", "end": "10:14" },
+      { "period": "brunch", "start": "10:14", "end": "10:29" },
+      { "period": "C", "start": "10:29", "end": "11:16" },
+      { "period": "D", "start": "11:26", "end": "12:13" },
+      { "period": "lunch", "start": "12:13", "end": "12:57" },
+      { "period": "E", "start": "12:57", "end": "13:44" },
+      { "period": "F", "start": "13:54", "end": "14:41" },
+      { "period": "G", "start": "14:51", "end": "15:38" }
+    ]
+  },
+  {
+    "date": "2017-12-05",
+    "summary": "Final Exams (see alternate schedule below)",
+    "description": "Period B Final (8:30-10:10)\nBrunch (10:10-10:25)\nPeriod D Final (10:30-12:10)\nBreak with NO LUNCH SERVED (12:10-12:40)\nZero & H Period Finals (12:45-2:25)\n",
+    "expect": [
+      { "period": "B", "start": "8:30", "end": "10:10", "finals": true },
+      { "period": "brunch", "start": "10:10", "end": "10:25" },
+      { "period": "D", "start": "10:30", "end": "12:10", "finals": true },
+      { "period": "brunch", "start": "12:10", "end": "12:40" },
+      { "period": ["0", "H"], "start": "12:45", "end": "14:25", "finals": true }
+    ]
+  },
+  {
+    "date": "2017-08-24",
+    "summary": "Final Exams (see alternate schedule below)",
+    "description": "Period A Final (8:30-10:10)\nBrunch (10:10-10:25)\nPeriod C Final (10:30-12:10)\nLunch (12:10-12:40)\nPeriod G Final (12:45-2:25)\n",
+    "expect": [
+      { "period": "A", "start": "8:30", "end": "10:10", "finals": true },
+      { "period": "brunch", "start": "10:10", "end": "10:25" },
+      { "period": "C", "start": "10:30", "end": "12:10", "finals": true },
+      { "period": "lunch", "start": "12:10", "end": "12:40" },
+      { "period": "G", "start": "12:45", "end": "14:25", "finals": true }
+    ]
+  },
+  {
+    "date": "2017-12-18",
+    "summary": "Final Exams (see alternate schedule below)",
+    "description": "Period E Final (8:30-10:10)\nBrunch (10:10-10:25)\nPeriod F Final (10:30-12:10)\n",
+    "expect": [
+      { "period": "E", "start": "8:30", "end": "10:10", "finals": true },
+      { "period": "brunch", "start": "10:10", "end": "10:25" },
+      { "period": "F", "start": "10:30", "end": "12:10", "finals": true }
+    ]
+  },
+  {
+    "date": "2017-12-02",
+    "summary": "Alternate schedule (see below)",
+    "description": "Period A (8:25-9:50)\nBrunch (9:50-10:05)\nPeriod B (10:05-11:25)\nPeriod C (11:35-12:55)\nLunch (12:55-1:35)\nPeriod F (1:35-2:55)\nStaff Collaboration (3:05-3:40)\n",
+    "expect": [
+      { "period": "A", "start": "8:25", "end": "9:50" },
+      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "B", "start": "10:05", "end": "11:25" },
+      { "period": "C", "start": "11:35", "end": "12:55" },
+      { "period": "lunch", "start": "12:55", "end": "13:35" },
+      { "period": "F", "start": "13:35", "end": "14:55" },
+      { "period": "collaboration", "start": "15:05", "end": "15:40" }
+    ]
+  },
+  {
+    "date": "2017-12-06",
+    "summary": "Alternate schedule (see below)",
+    "description": "Period D (8:25-9:50)\nBrunch (9:50-10:05)\nFlexTime (10:05-11:25)\nPeriod E (11:35-12:55)\nLunch (12:55-1:35)\nPeriod G (1:35-2:55)\n",
+    "expect": [
+      { "period": "D", "start": "8:25", "end": "9:50" },
+      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "flex", "start": "10:05", "end": "11:25" },
+      { "period": "E", "start": "11:35", "end": "12:55" },
+      { "period": "lunch", "start": "12:55", "end": "13:35" },
+      { "period": "G", "start": "13:35", "end": "14:55" }
+    ]
+  },
+  {
+    "date": "2017-12-07",
+    "summary": "Alternate schedule (see below)",
+    "description": "Period A (8:25-9:50)\nBrunch (9:50-10:05)\nPeriod B (10:05-11:25)\nPeriod C (11:35-12:55)\nLunch (12:55-1:35)\nPeriod F (1:35-2:55)\nStaff/Dept. meeting (3:05-3:40)\n",
+    "expect": [
+      { "period": "A", "start": "8:25", "end": "9:50" },
+      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "B", "start": "10:05", "end": "11:25" },
+      { "period": "C", "start": "11:35", "end": "12:55" },
+      { "period": "lunch", "start": "12:55", "end": "13:35" },
+      { "period": "F", "start": "13:35", "end": "14:55" },
+      { "period": "meetings", "start": "15:05", "end": "15:40" }
+    ]
+  },
+  {
+    "date": "2017-12-07",
+    "summary": "Alternate schedule (see below)",
+    "description": "Period D (8:25-9:50)\nBrunch (9:50-10:05)\nFlexTime (10:05-11:25)\nPeriod E (11:35-12:55)\nLunch (12:55-1:35)\nPeriod G (1:35-2:55)\n\nDepartment meetings (3:05-3:45)",
+    "expect": [
+      { "period": "D", "start": "8:25", "end": "9:50" },
+      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "flex", "start": "10:05", "end": "11:25" },
+      { "period": "E", "start": "11:35", "end": "12:55" },
+      { "period": "lunch", "start": "12:55", "end": "13:35" },
+      { "period": "G", "start": "13:35", "end": "14:55" },
+      { "period": "meetings", "start": "15:05", "end": "15:45" }
+    ]
+  },
+  {
+    "date": "2017-12-14",
+    "summary": "ALTERNATE SCHEDULE (see below)",
+    "description": "<p>Period A (freshmen at RISE assembly, others in class) (8:25-9:10)</p><p>Period B (freshmen at RISE assembly, others in class) (9:20-10:00)</p><p>Brunch (10:00-10:15)</p><p>Period C (seniors at RISE assembly, others in class) (10:15-10:55)</p><p>Period D (seniors at RISE assembly, others in class) (11:05-11:45)</p><p>Lunch (11:45-12:25)</p><p>Period F (juniors at RISE assembly, others in class) (12:25-1:05)</p><p>Period G (juniors at RISE assembly, others in class) (1:15-1:55)</p><p>Staff Collaboration (2:15-3:30)</p><p>&nbsp;</p>",
+    "expect": [
+      { "period": "A", "start": "8:25", "end": "9:10", "assemblies": "f" },
+      { "period": "B", "start": "9:20", "end": "10:00", "assemblies": "f" },
+      { "period": "brunch", "start": "10:00", "end": "10:15" },
+      { "period": "C", "start": "10:15", "end": "10:55", "assemblies": "S" },
+      { "period": "D", "start": "11:05", "end": "11:45", "assemblies": "S" },
+      { "period": "lunch", "start": "11:45", "end": "12:25" },
+      { "period": "F", "start": "12:25", "end": "13:05", "assemblies": "j" },
+      { "period": "G", "start": "13:15", "end": "13:55", "assemblies": "j" },
+      { "period": "collaboration", "start": "14:15", "end": "15:30" }
+    ]
+  },
+  {
+    "date": "2017-12-15",
+    "summary": "ALTERNATE SCHEDULE (see below)",
+    "description": "<p>Period E (sophomores at RISE assembly, others in class) (8:25-9:10)</p><p>FlexTime (sophomores at RISE assembly, freshmen at SELF, others in FlexTime) (9:20-10:00)</p><p>Brunch (10:00-10:15)</p><p>Period D (10:15-11:35)</p><p>Lunch (11:35-12:15)</p><p>Period A (12:15-1:35)</p><p>Period G (1:45-3:05)</p>",
+    "expect": [
+      { "period": "E", "start": "8:25", "end": "9:10", "assemblies": "s" },
+      { "period": "flex", "start": "9:20", "end": "10:00", "assemblies": "s", "self": "f" },
+      { "period": "brunch", "start": "10:00", "end": "10:15" },
+      { "period": "D", "start": "10:15", "end": "11:35" },
+      { "period": "lunch", "start": "11:35", "end": "12:15" },
+      { "period": "A", "start": "12:15", "end": "13:35" },
+      { "period": "G", "start": "13:45", "end": "15:05" }
+    ]
+  },
+  {
+    "date": "2017-12-18",
+    "summary": "ALTERNATE SCHEDULE (see below)",
+    "description": "<p>Period B (8:25-9:50)</p><p>Brunch (9:50-10:05)</p><p>Period C (10:05-11:25)</p><p>Period E (11:35-12:55)</p><p>Lunch (12:55-1:35)</p><p>Period F (1:35-2:55)</p><p>Staff Meeting (3:05-3:45)</p>",
+    "expect": [
+      { "period": "B", "start": "8:25", "end": "9:50" },
+      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "C", "start": "10:05", "end": "11:25" },
+      { "period": "E", "start": "11:35", "end": "12:55" },
+      { "period": "lunch", "start": "12:55", "end": "13:35" },
+      { "period": "F", "start": "13:35", "end": "14:55" },
+      { "period": "meetings", "start": "15:05", "end": "15:45" }
+    ]
+  },
+  {
+    "date": "2017-12-19",
+    "summary": "Alternate Schedule (see below)",
+    "description": "Period E (8:25-9:25)\nBrunch (9:25-9:40)     \nPeriod B (9:40-10:55)\nPeriod C (11:05-12:20)\nLunch (12:20-1:00)\nPeriod A (1:00-2:15)\nPeriod G (2:25-3:40)                                         ",
+    "expect": [
+      { "period": "E", "start": "8:25", "end": "9:25" },
+      { "period": "brunch", "start": "9:25", "end": "9:40" },
+      { "period": "B", "start": "9:40", "end": "10:55" },
+      { "period": "C", "start": "11:05", "end": "12:20" },
+      { "period": "lunch", "start": "12:20", "end": "13:00" },
+      { "period": "A", "start": "13:00", "end": "14:15" },
+      { "period": "G", "start": "14:25", "end": "15:40" }
+    ]
+  },
+  {
+    "date": "2017-12-20",
+    "summary": "Alternate Schedule (see below)",
+    "description": "Period C (8:25-9:25)\n\nBrunch (9:25-9:45)     \nTesting for juniors, FlexTime for others (9:45-11:45)\nPeriod D (11:55-12:50)\nLunch (12:50-1:30)\nPeriod G (1:30-2:25)\nStaff Collaboration (2:35-3:35)                                              ",
+    "expect": [
+      { "period": "C", "start": "8:25", "end": "9:25" },
+      { "period": "brunch", "start": "9:25", "end": "9:45" },
+      { "period": "flex", "start": "9:45", "end": "11:45", "testing": "j" },
+      { "period": "D", "start": "11:55", "end": "12:50" },
+      { "period": "lunch", "start": "12:50", "end": "13:30" },
+      { "period": "G", "start": "13:30", "end": "14:25" },
+      { "period": "collaboration", "start": "14:35", "end": "15:35" }
+    ]
+  },
+  {
+    "date": "2017-12-21",
+    "summary": "Alternate Schedule (see below)",
+    "description": "Period A (8:25-9:25)\nBrunch (9:25-9:45)     \nTesting for juniors, FlexTime for others (9:45-11:45)\nPeriod B (11:55-12:50)\nLunch (12:50-1:30)\nPeriod F (1:30-2:25)\nStaff Collaboration (2:35-3:35)                                              ",
+    "expect": [
+      { "period": "A", "start": "8:25", "end": "9:25" },
+      { "period": "brunch", "start": "9:25", "end": "9:45" },
+      { "period": "flex", "start": "9:45", "end": "11:45", "testing": "j" },
+      { "period": "B", "start": "11:55", "end": "12:50" },
+      { "period": "lunch", "start": "12:50", "end": "13:30" },
+      { "period": "F", "start": "13:30", "end": "14:25" },
+      { "period": "collaboration", "start": "14:35", "end": "15:35", "testing": "j" }
+    ]
+  },
+  {
+    "date": "2017-12-21",
+    "summary": "Alternate Schedule (see below)",
+    "description": "Period D (8:25-9:45)\nBrunch (9:45-10:00)     \nPeriod E (10:00-11:15)\nPeriod F (11:25-12:40)",
+    "expect": [
+      { "period": "D", "start": "8:25", "end": "9:45" },
+      { "period": "brunch", "start": "9:45", "end": "10:00" },
+      { "period": "E", "start": "10:00", "end": "11:15" },
+      { "period": "F", "start": "11:25", "end": "12:40" }
+    ]
+  },
+  {
+    "date": "2017-12-22",
+    "summary": "ALTERNATE SCHEDULE (see below)",
+    "description": "<p>Period D (8:25-9:50)</p><p>Brunch (9:50-10:05)</p><p>Double FlexTime (10:05-11:25)</p><p>Period E (11:35-12:55)</p><p>Lunch (12:55-1:35)</p><p>Period G (1:35-2:55)</p><p><br></p>",
+    "expect": [
+      { "period": "D", "start": "8:25", "end": "9:50" },
+      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "flex", "start": "10:05", "end": "11:25" },
+      { "period": "E", "start": "11:35", "end": "12:55" },
+      { "period": "lunch", "start": "12:55", "end": "13:35" },
+      { "period": "G", "start": "13:35", "end": "14:55" }
+    ]
+  },
+  {
+    "date": "2017-08-22",
+    "summary": "ALTERNATE SCHEDULE (see below)",
+    "description": "<p>Period A (8:25-9:50)</p><p>Brunch (9:50-10:05)</p><p>Period B (10:05-11:25)</p><p>Period C (11:35-12:55)</p><p>Lunch (12:55-1:35)</p><p>Period F (1:35-2:55)</p>",
+    "expect": [
+      { "period": "A", "start": "8:25", "end": "9:50" },
+      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "B", "start": "10:05", "end": "11:25" },
+      { "period": "C", "start": "11:35", "end": "12:55" },
+      { "period": "lunch", "start": "12:55", "end": "13:35" },
+      { "period": "F", "start": "13:35", "end": "14:55" }
+    ]
+  },
+  {
+    "date": "2018-02-01",
+    "summary": "Alternate schedule (see below)",
+    "description": "Period D (8:25-9:50)\nBrunch (9:50-10:05)\nFlexTime (10:05-11:00)\nPeriod E (11:10-12:30)\nClash of the Titans extended lunch (12:30-1:35)\nPeriod G (1:35-2:55)\n\nStaff Meeting (3:05-3:45)",
+    "expect": [
+      { "period": "D", "start": "8:25", "end": "9:50" },
+      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "flex", "start": "10:05", "end": "11:00" },
+      { "period": "E", "start": "11:10", "end": "12:30" },
+      { "period": "lunch", "start": "12:30", "end": "13:35" },
+      { "period": "G", "start": "13:35", "end": "14:55" },
+      { "period": "meetings", "start": "15:05", "end": "15:45" }
+    ]
+  },
+  {
+    "date": "2018-02-15",
+    "summary": "Alternate schedule (see below)",
+    "description": "Period A (8:25-9:50)\nBrunch (9:50-10:05)\nPeriod B (10:05-11:25)\nPeriod C (11:35-12:55)\nLunch (12:55-1:35)\nPeriod F (1:35-2:55)",
+    "expect": [
+      { "period": "A", "start": "8:25", "end": "9:50" },
+      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "B", "start": "10:05", "end": "11:25" },
+      { "period": "C", "start": "11:35", "end": "12:55" },
+      { "period": "lunch", "start": "12:55", "end": "13:35" },
+      { "period": "F", "start": "13:35", "end": "14:55" }
+    ]
+  },
+  {
+    "date": "2018-02-23",
+    "summary": "Alternate Schedule (see below)",
+    "description": "Testing for juniors, FlexTime for others  (8:25-10:00)\nBrunch (10:00-10:15)     \nTesting for juniors, FlexTime for others (10:15-12:15)\n\nStaff Collaboration (12:55-3:30)",
+    "expect": [
+      { "period": "flex", "start": "8:25", "end": "10:00", "testing": "j" },
+      { "period": "brunch", "start": "10:00", "end": "10:15" },
+      { "period": "flex", "start": "10:15", "end": "12:15", "testing": "j" },
+      { "period": "collaboration", "start": "12:55", "end": "15:30" }
+    ]
+  },
+  {
+    "date": "2018-02-28",
+    "summary": "International Potluck (extended lunch schedule, see below)",
+    "description": "<div style=\"color: rgb(0, 0, 0); font-family: 'Courier New', monospace, 'Courier New', EmojiFont, 'Apple Color Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'Android Emoji', EmojiSymbols; font-size: 16px; margin-top: 0px; margin-bottom: 0px;\">Period E (8:25-9:50)<div style=\"color: rgb(0, 0, 0); font-family: 'Courier New', monospace, 'Courier New', EmojiFont, 'Apple Color Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'Android Emoji', EmojiSymbols; font-size: 16px; margin-top: 0px; margin-bottom: 0px;\">Brunch (9:50-10:05)<div style=\"color: rgb(0, 0, 0); font-family: 'Courier New', monospace, 'Courier New', EmojiFont, 'Apple Color Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'Android Emoji', EmojiSymbols; font-size: 16px; margin-top: 0px; margin-bottom: 0px;\">FlexTime (10:05-10:35)<div style=\"color: rgb(0, 0, 0); font-family: 'Courier New', monospace, 'Courier New', EmojiFont, 'Apple Color Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'Android Emoji', EmojiSymbols; font-size: 16px; margin-top: 0px; margin-bottom: 0px;\">Period B (10:45-11:55)<div style=\"color: rgb(0, 0, 0); font-family: 'Courier New', monospace, 'Courier New', EmojiFont, 'Apple Color Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'Android Emoji', EmojiSymbols; font-size: 16px; margin-top: 0px; margin-bottom: 0px;\">EXTENDED LUNCH for Int'l. Potluck (11:55-12:55)<div style=\"color: rgb(0, 0, 0); font-family: 'Courier New', monospace, 'Courier New', EmojiFont, 'Apple Color Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'Android Emoji', EmojiSymbols; font-size: 16px; margin-top: 0px; margin-bottom: 0px;\">Period A (12:55-2:05)<div style=\"color: rgb(0, 0, 0); font-family: 'Courier New', monospace, 'Courier New', EmojiFont, 'Apple Color Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'Android Emoji', EmojiSymbols; font-size: 16px; margin-top: 0px; margin-bottom: 0px;\">Period G (2:15-3:35)",
+    "expect": [
+      { "period": "E", "start": "8:25", "end": "9:50" },
+      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "flex", "start": "10:05", "end": "10:35" },
+      { "period": "B", "start": "10:45", "end": "11:55" },
+      { "period": "lunch", "start": "11:55", "end": "12:55" },
+      { "period": "A", "start": "12:55", "end": "14:05" },
+      { "period": "G", "start": "14:15", "end": "15:35" }
+    ]
+  },
+  {
+    "date": "2018-02-21",
+    "summary": "Alternate Schedule (see below)",
+    "description": "<p><i>&nbsp; &nbsp;Tuesday,April 10</i><br></p><p><span>Period D (8:25-9:45)</span></p><p><span>Brunch (9:45-10:00)</span></p><p><span>Period E (10:00-11:15)</span></p><p><span>Period B (11:25-12:25)</span></p><p><span>Lunch (12:25-1:05)</span></p><p><span>Period A (1:05-2:05)</span></p><p><span>Period G (2:15-3:30)</span></p><p><span>&nbsp;</span></p>",
+    "expect": [
+      { "period": "D", "start": "8:25", "end": "9:45" },
+      { "period": "brunch", "start": "9:45", "end": "10:00" },
+      { "period": "E", "start": "10:00", "end": "11:15" },
+      { "period": "B", "start": "11:25", "end": "12:25" },
+      { "period": "lunch", "start": "12:25", "end": "13:05" },
+      { "period": "A", "start": "13:05", "end": "14:05" },
+      { "period": "G", "start": "14:15", "end": "15:30" }
+    ]
+  },
+  {
+    "date": "2018-02-23",
+    "summary": "Alternate Schedule (see below)",
+    "description": "<p><i>&nbsp; &nbsp;Wednesday,April 11</i><br></p><p><span>Period C (8:25-9:30)</span></p><p><span>Brunch (9:30-9:45)</span></p><p><span>·<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><i><u><span>FRESHMEN</span></u></i><i><span>: to Assembly(9:45-10:45), to SELF (10:55-11:55), to FlexTime (12:05-1:05)<u></u></span></i></p><p><span>·<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><i><u><span>SOPHOMORES</span></u></i><i>: to FlexTime(9:45-10:45), to Assembly (10:55-11:55), to FlexTime (12:05-1:05)</i></p><p><span>·<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><i><u><span>JUNIORS: </span></u></i><i><span>to FlexTime(9:45-10:45), to FlexTime (10:55-11:55), to Assembly (12:05-1:05)<u></u></span></i></p><p><span>·<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><i><u><span>SENIORS</span></u></i><i>: to CASTstate test (9:45-11:55), to Assembly (12:05-1:05)</i></p><p><span>Lunch (1:05-1:45)<i><u></u></i></span></p><p><span>Period F (1:45-2:45)</span></p><p><span>Staff Meeting (3:00-3:45)</span></p><p><span>&nbsp;</span></p><p><i>&nbsp; &nbsp;</i></p>",
+    "expect": [
+      { "period": "C", "start": "8:25", "end": "9:30" },
+      { "period": "brunch", "start": "9:30", "end": "9:45" },
+      { "period": "flex", "start": "9:45", "end": "10:45", "assemblies": "f", "testing": "S" },
+      { "period": "flex", "start": "10:55", "end": "11:55", "assemblies": "s", "testing": "S", "self": "f" },
+      { "period": "flex", "start": "12:05", "end": "13:05", "assemblies": "jS" },
+      { "period": "lunch", "start": "13:05", "end": "13:45" },
+      { "period": "F", "start": "13:45", "end": "14:45" },
+      { "period": "meetings", "start": "15:00", "end": "15:45" }
+    ]
+  },
+  {
+    "date": "2018-02-09",
+    "summary": "Alternate Schedule (see below)",
+    "description": "<p><i>&nbsp; &nbsp;Thursday,April 12</i><br></p><p><span>Period D (8:25-9:30)</span></p><p><span>Brunch (9:30-9:45)</span></p><p><span>Period E (9:45-10:45)</span></p><p><span>Period B (10:55-12:05)</span></p><p><span>Lunch (12:05-12:45)</span></p><p><span>Period A (12:45-1:55)</span></p><p><span>Period G (2:05-3:05)</span></p><p><span>Optional Tutorial (3:10-3:40)</span></p><p><span>&nbsp;</span></p><p><i>&nbsp; &nbsp;</i></p>",
+    "expect": [
+      { "period": "D", "start": "8:25", "end": "9:30" },
+      { "period": "brunch", "start": "9:30", "end": "9:45" },
+      { "period": "E", "start": "9:45", "end": "10:45" },
+      { "period": "B", "start": "10:55", "end": "12:05" },
+      { "period": "lunch", "start": "12:05", "end": "12:45" },
+      { "period": "A", "start": "12:45", "end": "13:55" },
+      { "period": "G", "start": "14:05", "end": "15:05" },
+      { "period": "flex", "start": "15:10", "end": "15:40" }
+    ]
+  },
+  {
+    "date": "2017-12-13",
+    "summary": "Winter Break Holiday",
+    "description": null,
+    "expect": []
+  },
+  {
+    "date": "2017-10-05",
+    "summary": "Staff Development Day (no students)",
+    "description": null,
+    "expect": []
+  },
+  {
+    "date": "2017-12-07",
+    "summary": "President's Day Holiday",
+    "description": null,
+    "expect": []
+  },
+  {
+    "date": "2018-02-07",
+    "summary": "Local Holiday",
+    "description": null,
+    "expect": []
+  },
+  {
+    "date": "2018-02-14",
+    "summary": "Spring Break",
+    "description": null,
+    "expect": []
+  }
+]
