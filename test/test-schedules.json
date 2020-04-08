@@ -1,10 +1,5 @@
 [
   {
-    "date": "2017-12-02#?#2018-03-13#?#2017-08-15",
-    "summary": "Semester 2 schedules online at 6pm",
-    "expect": null
-  },
-  {
     "date": "2017-12-07",
     "summary": "Staff Holiday Luncheon (see alt. schedule below)",
     "description": "Period E (8:25-9:45)\nBrunch (9:45-10:00)\nFlexTime (10:00-10:45)\nPeriod B (10:55-12:00)\nStaff Holiday Lunch in Bow Gym (12:00-12:55)\nPeriod A (1:05-2:10)\nPeriod G (2:20-3:35)\n",
@@ -894,5 +889,65 @@
       { "period": "lunch", "start": "12:55", "end": "13:35" },
       { "period": "G", "start": "13:35", "end": "14:55" }
     ]
+  },
+  {
+    "date": "2018-01-12",
+    "summary": "Last day to submit schedule change requests",
+    "description": null,
+    "expect": null
+  },
+  {
+    "date": "2018-03-12",
+    "summary": "Local Holiday",
+    "description": null,
+    "expect": []
+  },
+  {
+    "date": "2018-05-28",
+    "summary": "MEMORIAL DAY HOLIDAY",
+    "description": null,
+    "expect": []
+  },
+  {
+    "date": "2018-01-15",
+    "summary": "MLK Holiday",
+    "description": null,
+    "expect": []
+  },
+  {
+    "date": "2018-02-19",
+    "summary": "President's Day Holiday",
+    "description": null,
+    "expect": []
+  },
+  {
+    "date": "2018-04-02",
+    "summary": "Spring Break",
+    "description": null,
+    "expect": []
+  },
+  {
+    "date": "2017-12-18",
+    "summary": "Semester 2 schedules online at 6pm",
+    "description": null,
+    "expect": null
+  },
+  {
+    "date": "2018-01-08",
+    "summary": "Staff Development Day (no students)",
+    "description": null,
+    "expect": []
+  },
+  {
+    "date": "2017-11-10",
+    "summary": "Veterans' Day Holiday",
+    "description": null,
+    "expect": []
+  },
+  {
+    "date": "2017-12-22",
+    "summary": "Winter Break Holiday",
+    "description": null,
+    "expect": []
   }
 ]
