@@ -503,57 +503,144 @@
   {
     "date": "2019-10-10",
     "summary": "PSAT/Grade Level assemblies alternate schedule",
-    "description": "<span>ALL STUDENTS ATTEND, 8:30-12:00 (brunch served, no lunch)</span><br><span>No afternoon classes</span><br><span>Staff Collaboration (1:00-3:45)</span>"
+    "description": "<span>ALL STUDENTS ATTEND, 8:30-12:00 (brunch served, no lunch)</span><br><span>No afternoon classes</span><br><span>Staff Collaboration (1:00-3:45)</span>",
+    "expect": [
+      { "period": "flex", "start": "8:30", "end": "12:00", "assemblies": "fsS", "testing": "j" },
+      { "period": "collaboration", "start": "13:00", "end": "15:45" }
+    ]
   },
   {
     "date": "2019-02-07",
     "summary": "AMC Math Test (alternate schedule)",
-    "description": "<span>AMC Math Test for test-takers only (8:25-9:50)</span><br><span>Period E (10:00-11:08)</span><br><span>Period B (11:18-12:26)</span><br><span>Lunch (12:26-1:09)</span><br><span>Period A (1:09-2:17)</span><br><span>Period G (2:27-3:35)</span>"
+    "description": "<span>AMC Math Test for test-takers only (8:25-9:50)</span><br><span>Period E (10:00-11:08)</span><br><span>Period B (11:18-12:26)</span><br><span>Lunch (12:26-1:09)</span><br><span>Period A (1:09-2:17)</span><br><span>Period G (2:27-3:35)</span>",
+    "expect": [
+      { "period": "amc", "start": "8:25", "end": "9:50" },
+      { "period": "E", "start": "10:00", "end": "11:08" },
+      { "period": "B", "start": "11:18", "end": "12:26" },
+      { "period": "lunch", "start": "12:26", "end": "13:09" },
+      { "period": "A", "start": "13:09", "end": "14:17" },
+      { "period": "G", "start": "14:27", "end": "15:35" }
+    ]
   },
   {
     "date": "2019-09-06",
     "summary": "Alternate schedule (see below)",
     "description": "Period D (8:25-9:50)\nBrunch (9:50-10:05)\nAssembly for 9th/10th graders in Spangenberg Theater\n(10:05-10:40)11th/12th graders to FlexTimeAssembly for 11th/12th graders in Spangenberg Theater (10:50-11:25)9th/10th graders to FlexTime\nPeriod E (11:35-12:55)\nLunch (12:55-1:35)\nPeriod G (1:35-2:55)",
-    "old": true
+    "old": true,
+    "expect": [
+      { "period": "D", "start": "8:25", "end": "9:50" },
+      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "flex", "start": "10:05", "end": "10:40", "assemblies": "fs" },
+      { "period": "flex", "start": "10:50", "end": "11:25", "assemblies": "jS" },
+      { "period": "E", "start": "11:35", "end": "12:55" },
+      { "period": "lunch", "start": "12:55", "end": "13:35" },
+      { "period": "G", "start": "13:35", "end": "14:55" }
+    ]
   },
   {
     "date": "2019-09-06",
     "summary": "Alternate schedule (see below)",
-    "description": "Period D (8:25-9:50)\nBrunch (9:50-10:05)\n\nAssembly for 9th/10th graders in Spangenberg Theater, 11th graders to SELF, 12th graders to            FlexTime (10:05-10:40)\n\nAssembly for 11th/12th graders in Spangenberg Theater, 9th/10th graders to SELF (10:50-11:25)\n\nPeriod E (11:35-12:55)\nLunch (12:55-1:35)\nPeriod G (1:35-2:55)"
+    "description": "Period D (8:25-9:50)\nBrunch (9:50-10:05)\n\nAssembly for 9th/10th graders in Spangenberg Theater, 11th graders to SELF, 12th graders to            FlexTime (10:05-10:40)\n\nAssembly for 11th/12th graders in Spangenberg Theater, 9th/10th graders to SELF (10:50-11:25)\n\nPeriod E (11:35-12:55)\nLunch (12:55-1:35)\nPeriod G (1:35-2:55)",
+    "expect": [
+      { "period": "D", "start": "8:25", "end": "9:50" },
+      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "flex", "start": "10:05", "end": "10:40", "assemblies": "fs", "self": "j" },
+      { "period": "flex", "start": "10:50", "end": "11:25", "assemblies": "jS", "self": "fs" },
+      { "period": "E", "start": "11:35", "end": "12:55" },
+      { "period": "lunch", "start": "12:55", "end": "13:35" },
+      { "period": "G", "start": "13:35", "end": "14:55" }
+    ]
   },
   {
     "date": "2020-03-16",
     "summary": "ALTERNATE SCHEDULE",
-    "description": "<p>Period B (8:25-9:20)</p><p>Brunch (9:20-9:40)</p><p>CAST for seniors/SELF for others (9:40-11:40)</p><p>Lunch (11:40-12:20)</p><p>CAST for sophomores/Flextime for others (12:20-2:20)</p>Period A (2:35-3:25)&nbsp; &nbsp;&nbsp;"
+    "description": "<p>Period B (8:25-9:20)</p><p>Brunch (9:20-9:40)</p><p>CAST for seniors/SELF for others (9:40-11:40)</p><p>Lunch (11:40-12:20)</p><p>CAST for sophomores/Flextime for others (12:20-2:20)</p>Period A (2:35-3:25)&nbsp; &nbsp;&nbsp;",
+    "expect": [
+      { "period": "B", "start": "8:25", "end": "9:20" },
+      { "period": "brunch", "start": "9:20", "end": "9:40" },
+      { "period": "flex", "start": "9:40", "end": "11:40", "testing": "S", "self": "fsj" },
+      { "period": "lunch", "start": "11:40", "end": "12:20" },
+      { "period": "flex", "start": "12:20", "end": "14:20", "testing": "s" },
+      { "period": "A", "start": "14:35", "end": "15:25" }
+    ]
   },
   {
     "date": "2020-03-17",
     "summary": "ALTERNATE SCHEDULE",
-    "description": "<p>Period C (8:25-9:20)</p><p>Brunch (9:20-9:40)</p><p>CAASPP #1 (9:40-11:40)</p><p>Period D (11:55-12:45)</p><p>Lunch (12:45-1:25)</p><p>Period F (1:25-2:15)&nbsp;&nbsp;</p><p>WASC Focus Groups (2:25-3:25)&nbsp;&nbsp;<br></p>"
+    "description": "<p>Period C (8:25-9:20)</p><p>Brunch (9:20-9:40)</p><p>CAASPP #1 (9:40-11:40)</p><p>Period D (11:55-12:45)</p><p>Lunch (12:45-1:25)</p><p>Period F (1:25-2:15)&nbsp;&nbsp;</p><p>WASC Focus Groups (2:25-3:25)&nbsp;&nbsp;<br></p>",
+    "expect": [
+      { "period": "C", "start": "8:25", "end": "9:20" },
+      { "period": "brunch", "start": "9:20", "end": "9:40" },
+      { "period": "flex", "start": "9:40", "end": "11:40", "testing": "j" },
+      { "period": "D", "start": "11:55", "end": "12:45" },
+      { "period": "lunch", "start": "12:45", "end": "13:25" },
+      { "period": "F", "start": "13:25", "end": "14:15" },
+      { "period": "wasc-focus-groups", "start": "14:25", "end": "15:25" }
+    ]
   },
   {
     "date": "2020-03-18",
     "summary": "ALTERNATE SCHEDULE",
-    "description": "<p>Period E (8:25-9:20)</p><p>Brunch (9:20-9:40)</p><p>CAASPP #2 (9:40-11:40)</p><p>Lunch (11:40-12:20)</p><p>CAASPP #3 (12:20-2:20)</p>Period G (2:35-3:25)&nbsp; &nbsp;&nbsp;"
+    "description": "<p>Period E (8:25-9:20)</p><p>Brunch (9:20-9:40)</p><p>CAASPP #2 (9:40-11:40)</p><p>Lunch (11:40-12:20)</p><p>CAASPP #3 (12:20-2:20)</p>Period G (2:35-3:25)&nbsp; &nbsp;&nbsp;",
+    "expect": [
+      { "period": "E", "start": "8:25", "end": "9:20" },
+      { "period": "brunch", "start": "9:20", "end": "9:40" },
+      { "period": "flex", "start": "9:40", "end": "11:40", "testing": "j" },
+      { "period": "lunch", "start": "11:40", "end": "12:20" },
+      { "period": "flex", "start": "12:20", "end": "14:20", "testing": "j" },
+      { "period": "G", "start": "14:35", "end": "15:25" }
+    ]
   },
   {
     "date": "2020-03-19",
     "summary": "ALTERNATE SCHEDULE",
-    "description": "<p>Period B (8:25-9:35)</p><p>Brunch (9:35-9:55)</p><p>CAASPP #4 (9:55-11:55)</p><p>Extended lunch &amp; BBQ(11:55-12:50)</p><p>Period A (12:50-2:00)</p>Period F (2:10-3:15)&nbsp; &nbsp;&nbsp;"
+    "description": "<p>Period B (8:25-9:35)</p><p>Brunch (9:35-9:55)</p><p>CAASPP #4 (9:55-11:55)</p><p>Extended lunch &amp; BBQ(11:55-12:50)</p><p>Period A (12:50-2:00)</p>Period F (2:10-3:15)&nbsp; &nbsp;&nbsp;",
+    "expect": [
+      { "period": "B", "start": "8:25", "end": "9:35" },
+      { "period": "brunch", "start": "9:35", "end": "9:55" },
+      { "period": "flex", "start": "9:55", "end": "11:55", "testing": "j" },
+      { "period": "lunch", "start": "11:55", "end": "12:50" },
+      { "period": "A", "start": "12:50", "end": "14:00" },
+      { "period": "F", "start": "14:10", "end": "15:15" }
+    ]
   },
   {
     "date": "2020-03-20",
     "summary": "ALTERNATE SCHEDULE",
-    "description": "<p>Period C (8:25-9:35)</p><p>Brunch (9:35-9:50)</p><p>Period D (9:50-10:55)</p><p>Period E (11:05-12:10)</p><p>Lunch (12:10-12:50)</p>Period G (12:50-1:55)&nbsp; &nbsp;&nbsp;"
+    "description": "<p>Period C (8:25-9:35)</p><p>Brunch (9:35-9:50)</p><p>Period D (9:50-10:55)</p><p>Period E (11:05-12:10)</p><p>Lunch (12:10-12:50)</p>Period G (12:50-1:55)&nbsp; &nbsp;&nbsp;",
+    "expect": [
+      { "period": "C", "start": "8:25", "end": "9:35" },
+      { "period": "brunch", "start": "9:35", "end": "9:50" },
+      { "period": "D", "start": "9:50", "end": "10:55" },
+      { "period": "E", "start": "11:05", "end": "12:10" },
+      { "period": "lunch", "start": "12:10", "end": "12:50" },
+      { "period": "G", "start": "12:50", "end": "13:55" }
+    ]
   },
   {
     "date": "2020-03-31",
     "summary": "Alternate Schedule (see below)",
-    "description": "<p>Period D (8:25-9:50) </p><p>Brunch (9:50-10:05) </p><p>Elections Assembly, 9-11 grades; Flex for 12th grade&nbsp; (10:05-11:25) </p><p>PeriodE (11:35-12:55) </p><p>Lunch (12:55-1:35) </p>PeriodG (1:35-2:55)&nbsp; &nbsp;&nbsp;"
+    "description": "<p>Period D (8:25-9:50) </p><p>Brunch (9:50-10:05) </p><p>Elections Assembly, 9-11 grades; Flex for 12th grade&nbsp; (10:05-11:25) </p><p>PeriodE (11:35-12:55) </p><p>Lunch (12:55-1:35) </p>PeriodG (1:35-2:55)&nbsp; &nbsp;&nbsp;",
+    "expect": [
+      { "period": "D", "start": "8:25", "end": "9:50" },
+      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "flex", "start": "10:05", "end": "11:25", "assemblies": "fsj" },
+      { "period": "E", "start": "11:35", "end": "12:55" },
+      { "period": "lunch", "start": "12:55", "end": "13:35" },
+      { "period": "G", "start": "13:35", "end": "14:55" }
+    ]
   },
   {
     "date": "2020-04-02",
     "summary": "Alternate Schedule (see below)",
-    "description": "<p>Period D (8:25-9:50) </p><p>Brunch (9:50-10:05) </p><p>Double FlexTime (10:05-11:25) </p><p>Period E (11:35-12:55) </p><p>Lunch (12:55-1:35) </p><p>PeriodG (1:35-2:55)&nbsp; &nbsp;&nbsp;<br></p>"
+    "description": "<p>Period D (8:25-9:50) </p><p>Brunch (9:50-10:05) </p><p>Double FlexTime (10:05-11:25) </p><p>Period E (11:35-12:55) </p><p>Lunch (12:55-1:35) </p><p>PeriodG (1:35-2:55)&nbsp; &nbsp;&nbsp;<br></p>",
+    "expect": [
+      { "period": "D", "start": "8:25", "end": "9:50" },
+      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "flex", "start": "10:05", "end": "11:25" },
+      { "period": "E", "start": "11:35", "end": "12:55" },
+      { "period": "lunch", "start": "12:55", "end": "13:35" },
+      { "period": "G", "start": "13:35", "end": "14:55" }
+    ]
   }
 ]
