@@ -246,6 +246,7 @@
     "date": "2018-03-02",
     "summary": "ALTERNATE SCHEDULE (see below)",
     "description": "<p>Period A (8:25-9:50)</p><p>Brunch (9:50-10:05)</p><p>Period B (10:05-11:25)</p><p>Period C (11:35-12:55)</p><p>Lunch (12:55-1:35)</p><p>Period F (1:35-2:55)</p>",
+    "expectedReason": "4-day",
     "expect": [
       { "period": "A", "start": "8:25", "end": "9:50" },
       { "period": "brunch", "start": "9:50", "end": "10:05" },
@@ -259,6 +260,7 @@
     "date": "2018-03-14",
     "summary": "Alternate schedule (see below)",
     "description": "Period D (8:25-9:50)\nBrunch (9:50-10:05)\nFlexTime (10:05-11:00)\nPeriod E (11:10-12:30)\nClash of the Titans extended lunch (12:30-1:35)\nPeriod G (1:35-2:55)\n\nStaff Meeting (3:05-3:45)",
+    "expectedReason": "4-day",
     "expect": [
       { "period": "D", "start": "8:25", "end": "9:50" },
       { "period": "brunch", "start": "9:50", "end": "10:05" },
@@ -273,6 +275,7 @@
     "date": "2018-03-15",
     "summary": "Alternate schedule (see below)",
     "description": "Period A (8:25-9:50)\nBrunch (9:50-10:05)\nPeriod B (10:05-11:25)\nPeriod C (11:35-12:55)\nLunch (12:55-1:35)\nPeriod F (1:35-2:55)",
+    "expectedReason": "4-day",
     "expect": [
       { "period": "A", "start": "8:25", "end": "9:50" },
       { "period": "brunch", "start": "9:50", "end": "10:05" },
@@ -286,6 +289,7 @@
     "date": "2018-03-28",
     "summary": "Alternate Schedule (see below)",
     "description": "Testing for juniors, FlexTime for others  (8:25-10:00)\nBrunch (10:00-10:15)     \nTesting for juniors, FlexTime for others (10:15-12:15)\n\nStaff Collaboration (12:55-3:30)",
+    "expectedReason": "caaspp",
     "expect": [
       { "period": "flex", "start": "8:25", "end": "10:00", "testing": "j" },
       { "period": "brunch", "start": "10:00", "end": "10:15" },
@@ -354,36 +358,6 @@
     ]
   },
   {
-    "date": "2017-12-13",
-    "summary": "Winter Break Holiday",
-    "description": null,
-    "expect": []
-  },
-  {
-    "date": "2017-08-31",
-    "summary": "Staff Development Day (no students)",
-    "description": null,
-    "expect": []
-  },
-  {
-    "date": "2017-12-07#?#2017-12-07#?#2018-02-14#?#2018-02-21#?#2017-10-04",
-    "summary": "President's Day Holiday",
-    "description": null,
-    "expect": []
-  },
-  {
-    "date": "2018-02-07",
-    "summary": "Local Holiday",
-    "description": null,
-    "expect": []
-  },
-  {
-    "date": "2018-02-14",
-    "summary": "Spring Break",
-    "description": null,
-    "expect": []
-  },
-  {
     "date": "2018-08-29",
     "summary": "Alternate Schedule (see below)",
     "description": "<span style=\"color: rgb(0, 0, 0); font-family: Arial, sans-serif; font-size: 12px; white-space: pre-wrap; background-color: rgb(255, 255, 255);\">Period A (8:25-9:50)Brunch (9:50-10:05)Period B (10:05-11:25)Period C (11:35-12:55)Lunch (12:55-1:35)Period F (1:35-2:55)</span>",
@@ -400,6 +374,7 @@
     "date": "2018-08-30",
     "summary": "Alternate Schedule (see below)",
     "description": "<span style=\"color: rgb(0, 0, 0); font-family: Arial, sans-serif; font-size: 12px; white-space: pre-wrap; background-color: rgb(255, 255, 255);\">Period D (8:25-9:50)Brunch (9:50-10:05)FlexTime (10:05-11:25)Period E (11:35-12:55)Lunch (12:55-1:35)Period G (1:35-2:55)BACK TO SCHOOL NIGHT (6:00-9:00pm)</span>",
+    "expectedReason": "4-day",
     "expect": [
       { "period": "D", "start": "8:25", "end": "9:50" },
       { "period": "brunch", "start": "9:50", "end": "10:05" },
@@ -429,6 +404,7 @@
     "date": "2018-09-07",
     "summary": "Assembly Schedule (see below)",
     "description": "<span style=\"color: rgb(0, 0, 0); font-family: Arial, sans-serif; font-size: 12px; white-space: pre-wrap; background-color: rgb(255, 255, 255);\">Period D (8:25-9:50)Brunch (9:50-10:05)Assembly for 9th/10th graders in Titan Gym (10:05-10:40)11th/12th graders to FlexTimeAssembly for 11th/12th graders in Titan Gym (10:50-11:25)9th/10th graders to FlexTimePeriod E (11:35-12:55)Lunch (12:55-1:35)Period G (1:35-2:55)</span>",
+    "expectedReason": "assemblies",
     "expect": [
       { "period": "D", "start": "8:25", "end": "9:50" },
       { "period": "brunch", "start": "9:50", "end": "10:05" },
@@ -442,12 +418,14 @@
   {
     "date": "2019-03-13",
     "summary": "Clash of the Titans (alternate schedule below)",
-    "description": "Students vs. Staff annual basketball game!"
+    "description": "Students vs. Staff annual basketball game!",
+    "expect": null
   },
   {
     "date": "2019-03-14",
     "summary": "Alternate Schedule (see below)",
     "description": "<br><br><span>Period A (8:25-9:50)Brunch (9:50-10:05)Period B (10:05-11:25)Period C (11:35-12:55)Lunch (12:55-1:35)Period F (1:35-2:55)&nbsp;</span>",
+    "expectedReason": "4-day",
     "expect": [
       { "period": "A", "start": "8:25", "end": "9:50" },
       { "period": "brunch", "start": "9:50", "end": "10:05" },
@@ -461,6 +439,7 @@
     "date": "2019-02-20",
     "summary": "Alternate Schedule (see below)",
     "description": "Period D (8:25-9:50)Lockdown Drill in D Period (9:50-11:10)Brunch (11:10-11:25)Period E (11:25-12:45)Lunch (12:45-1:25)Period G (1:25-2:50)Dept. meetings",
+    "expectedReason": "drill",
     "expect": [
       { "period": "D", "start": "8:25", "end": "9:50" },
       { "period": "D", "start": "9:50", "end": "11:10" },
@@ -474,6 +453,7 @@
     "date": "2019-03-25",
     "summary": "CAASPP TESTING (see schedule below)",
     "description": "Period A (8:25-9:25)\nBrunch (9:25-9:45)\nELA testing for juniors (9:45-11:45)\nCAST testing for sophomores (9:45-11:45)\nFlextime for freshmen and seniors (9:45-11:45)\nPeriod B (11:55-12:50)\nLunch (12:50-1:30)\nPeriod F (1:30-2:25)\nStaff Collaboration (2:35-3:35)",
+    "expectedReason": "caaspp",
     "expect": [
       { "period": "A", "start": "8:25", "end": "9:25" },
       { "period": "brunch", "start": "9:25", "end": "9:45" },
@@ -488,6 +468,7 @@
     "date": "2019-03-26",
     "summary": "CAASPP TESTING (see schedule below)",
     "description": "Period C (8:25-9:25)\nBrunch (9:25-9:45)\nELA testing for juniors (9:45-11:45)\nFlextime for seniors (9:45-11:45)\nSELF for freshmen (9:45-10:40)\nFlextime for sophomores (9:45-10:40)\nFlextime for freshmen (10:50-11:45)\nSELF for sophomores (10:50-11:45)\nPeriod D (11:55-12:50)\nunch (12:50-1:30)\nPeriod G (1:30-2:25)\nStaff Collaboration (2:35-3:35)",
+    "expectedReason": "caaspp",
     "expect": [
       { "period": "C", "start": "8:25", "end": "9:25" },
       { "period": "brunch", "start": "9:25", "end": "9:45" },
@@ -503,6 +484,7 @@
     "date": "2019-03-27",
     "summary": "CAASPP TESTING (see schedule below)",
     "description": "Math testing for juniors (8:25-10:00)\nFlextime for freshmen, sophomores & seniors (8:25-10:00)\nBrunch (10:00-10:15)\nMath testing for juniors (10:15-12:15)\nFlextime for freshmen, sophomores & seniors (10:15-12:15)\nBBQ Lunch for test-takers! (12:15-1:05)\nStaff Collaboration (1:15-3:30)",
+    "expectedReason": "caaspp",
     "expect": [
       { "period": "flex", "start": "8:25", "end": "10:00", "testing": "j" },
       { "period": "brunch", "start": "10:00", "end": "10:15" },
@@ -515,6 +497,7 @@
     "date": "2019-10-10",
     "summary": "PSAT/Grade Level assemblies alternate schedule",
     "description": "<span>ALL STUDENTS ATTEND, 8:30-12:00 (brunch served, no lunch)</span><br><span>No afternoon classes</span><br><span>Staff Collaboration (1:00-3:45)</span>",
+    "expectedReason": "psat",
     "expect": [
       { "period": "flex", "start": "8:30", "end": "12:00", "assemblies": "fsS", "testing": "j" },
       { "period": "collaboration", "start": "13:00", "end": "15:45" }
@@ -524,6 +507,7 @@
     "date": "2019-02-07",
     "summary": "AMC Math Test (alternate schedule)",
     "description": "<span>AMC Math Test for test-takers only (8:25-9:50)</span><br><span>Period E (10:00-11:08)</span><br><span>Period B (11:18-12:26)</span><br><span>Lunch (12:26-1:09)</span><br><span>Period A (1:09-2:17)</span><br><span>Period G (2:27-3:35)</span>",
+    "expectedReason": "amc",
     "expect": [
       { "period": "unknown", "start": "8:25", "end": "9:50", "name": "AMC Math Test for test-takers only" },
       { "period": "E", "start": "10:00", "end": "11:08" },
@@ -538,6 +522,7 @@
     "summary": "Alternate schedule (see below)",
     "description": "Period D (8:25-9:50)\nBrunch (9:50-10:05)\nAssembly for 9th/10th graders in Spangenberg Theater\n(10:05-10:40)11th/12th graders to FlexTimeAssembly for 11th/12th graders in Spangenberg Theater (10:50-11:25)9th/10th graders to FlexTime\nPeriod E (11:35-12:55)\nLunch (12:55-1:35)\nPeriod G (1:35-2:55)",
     "old": true,
+    "expectedReason": "assemblies",
     "expect": [
       { "period": "D", "start": "8:25", "end": "9:50" },
       { "period": "brunch", "start": "9:50", "end": "10:05" },
@@ -552,6 +537,7 @@
     "date": "2019-09-06",
     "summary": "Alternate schedule (see below)",
     "description": "Period D (8:25-9:50)\nBrunch (9:50-10:05)\n\nAssembly for 9th/10th graders in Spangenberg Theater, 11th graders to SELF, 12th graders to            FlexTime (10:05-10:40)\n\nAssembly for 11th/12th graders in Spangenberg Theater, 9th/10th graders to SELF (10:50-11:25)\n\nPeriod E (11:35-12:55)\nLunch (12:55-1:35)\nPeriod G (1:35-2:55)",
+    "expectedReason": "assemblies",
     "expect": [
       { "period": "D", "start": "8:25", "end": "9:50" },
       { "period": "brunch", "start": "9:50", "end": "10:05" },
@@ -566,6 +552,7 @@
     "date": "2020-03-16",
     "summary": "ALTERNATE SCHEDULE",
     "description": "<p>Period B (8:25-9:20)</p><p>Brunch (9:20-9:40)</p><p>CAST for seniors/SELF for others (9:40-11:40)</p><p>Lunch (11:40-12:20)</p><p>CAST for sophomores/Flextime for others (12:20-2:20)</p>Period A (2:35-3:25)&nbsp; &nbsp;&nbsp;",
+    "expectedReason": "caaspp",
     "expect": [
       { "period": "B", "start": "8:25", "end": "9:20" },
       { "period": "brunch", "start": "9:20", "end": "9:40" },
@@ -579,6 +566,7 @@
     "date": "2020-03-17",
     "summary": "ALTERNATE SCHEDULE",
     "description": "<p>Period C (8:25-9:20)</p><p>Brunch (9:20-9:40)</p><p>CAASPP #1 (9:40-11:40)</p><p>Period D (11:55-12:45)</p><p>Lunch (12:45-1:25)</p><p>Period F (1:25-2:15)&nbsp;&nbsp;</p><p>WASC Focus Groups (2:25-3:25)&nbsp;&nbsp;<br></p>",
+    "expectedReason": "caaspp",
     "expect": [
       { "period": "C", "start": "8:25", "end": "9:20" },
       { "period": "brunch", "start": "9:20", "end": "9:40" },
@@ -593,6 +581,7 @@
     "date": "2020-03-18",
     "summary": "ALTERNATE SCHEDULE",
     "description": "<p>Period E (8:25-9:20)</p><p>Brunch (9:20-9:40)</p><p>CAASPP #2 (9:40-11:40)</p><p>Lunch (11:40-12:20)</p><p>CAASPP #3 (12:20-2:20)</p>Period G (2:35-3:25)&nbsp; &nbsp;&nbsp;",
+    "expectedReason": "caaspp",
     "expect": [
       { "period": "E", "start": "8:25", "end": "9:20" },
       { "period": "brunch", "start": "9:20", "end": "9:40" },
@@ -606,6 +595,7 @@
     "date": "2020-03-19",
     "summary": "ALTERNATE SCHEDULE",
     "description": "<p>Period B (8:25-9:35)</p><p>Brunch (9:35-9:55)</p><p>CAASPP #4 (9:55-11:55)</p><p>Extended lunch &amp; BBQ(11:55-12:50)</p><p>Period A (12:50-2:00)</p>Period F (2:10-3:15)&nbsp; &nbsp;&nbsp;",
+    "expectedReason": "caaspp",
     "expect": [
       { "period": "B", "start": "8:25", "end": "9:35" },
       { "period": "brunch", "start": "9:35", "end": "9:55" },
@@ -632,6 +622,7 @@
     "date": "2020-03-31",
     "summary": "Alternate Schedule (see below)",
     "description": "<p>Period D (8:25-9:50) </p><p>Brunch (9:50-10:05) </p><p>Elections Assembly, 9-11 grades; Flex for 12th grade&nbsp; (10:05-11:25) </p><p>PeriodE (11:35-12:55) </p><p>Lunch (12:55-1:35) </p>PeriodG (1:35-2:55)&nbsp; &nbsp;&nbsp;",
+    "expectedReason": "assemblies",
     "expect": [
       { "period": "D", "start": "8:25", "end": "9:50" },
       { "period": "brunch", "start": "9:50", "end": "10:05" },
@@ -645,6 +636,7 @@
     "date": "2020-04-02",
     "summary": "Alternate Schedule (see below)",
     "description": "<p>Period D (8:25-9:50) </p><p>Brunch (9:50-10:05) </p><p>Double FlexTime (10:05-11:25) </p><p>Period E (11:35-12:55) </p><p>Lunch (12:55-1:35) </p><p>PeriodG (1:35-2:55)&nbsp; &nbsp;&nbsp;<br></p>",
+    "expectedReason": "4-day",
     "expect": [
       { "period": "D", "start": "8:25", "end": "9:50" },
       { "period": "brunch", "start": "9:50", "end": "10:05" },
@@ -658,6 +650,7 @@
     "date": "2017-09-01",
     "summary": "Minimum Day (see schedule below)",
     "description": "Period C (8:25-9:15)\nPeriod D (9:25-10:10)\nBrunch (10:10-10:25)\nPeriod E (10:25-11:10)\nPeriod F (11:20-12:05)\nPeriod G (12:15-1:00)\n\n",
+    "expectedReason": "minimum",
     "expect": [
       { "period": "C", "start": "8:25", "end": "9:15" },
       { "period": "D", "start": "9:25", "end": "10:10" },
@@ -671,6 +664,7 @@
     "date": "2017-09-05",
     "summary": "Alternate Schedule (see below)",
     "description": "Period A (8:25-9:50)\nBrunch (9:50-10:05)\nPeriod B (10:05-11:25)\nPeriod C (11:35-12:55)\nLunch (12:55-1:35)\nPeriod F (1:35-2:55)\nStaff Collaboration (3:05-3:40)\n\n",
+    "expectedReason": "4-day",
     "expect": [
       { "period": "A", "start": "8:25", "end": "9:50" },
       { "period": "brunch", "start": "9:50", "end": "10:05" },
@@ -685,6 +679,7 @@
     "date": "2017-09-06",
     "summary": "Alternate Schedule (see below)",
     "description": "Period D (8:25-9:50)\nBrunch (9:50-10:05)\nFlexTime (10:05-11:25)\nPeriod E (11:35-12:55)\nLunch (12:55-1:35)\nPeriod G (1:35-2:55)\n\n",
+    "expectedReason": "4-day",
     "expect": [
       { "period": "D", "start": "8:25", "end": "9:50" },
       { "period": "brunch", "start": "9:50", "end": "10:05" },
@@ -695,15 +690,10 @@
     ]
   },
   {
-    "date": "2017-09-04",
-    "summary": "LABOR DAY HOLIDAY",
-    "description": "\n",
-    "expect": []
-  },
-  {
     "date": "2017-09-07",
     "summary": "Alternate Schedule (see below)",
     "description": "Period A (8:25-9:50)\nBrunch (9:40-10:05)\nPeriod B (10:05-11:25)\nPeriod C (11:35-12:55)\nLunch (12:55-1:35)\nPeriod F (1:35-2:55)\nStaff/Dept. Meeting (3:05-3:40)\n\n",
+    "expectedReason": "4-day",
     "expect": [
       { "period": "A", "start": "8:25", "end": "9:50" },
       { "period": "brunch", "start": "9:40", "end": "10:05" },
@@ -718,6 +708,7 @@
     "date": "2017-09-08",
     "summary": "Assembly alternate schedule (see below)",
     "description": "Period D (8:25-9:50)\nBrunch (9:50-10:05)\nAssembly for 9th/10th graders in Titan Gym (10:05-10:40)\n11th/12th graders to FlexTime\nAssembly for 11th/12th graders in Titan Gym (10:50-11:25)\n9th/10th graders to FlexTime\nPeriod E (11:35-12:55)\nLunch (12:55-1:35)\nPeriod G (1:35-2:55)\n\n",
+    "expectedReason": "assemblies",
     "expect": [
       { "period": "D", "start": "8:25", "end": "9:50" },
       { "period": "brunch", "start": "9:50", "end": "10:05" },
@@ -732,6 +723,7 @@
     "date": "2018-01-11",
     "summary": "Alternate schedule (see below)",
     "description": "Period A (8:25-9:50)\nBrunch (9:50-10:05)\nPeriod B (10:05-11:25)\nPeriod C (11:35-12:55)\nLunch (12:55-1:35)\nPeriod F (1:35-2:55)\n",
+    "expectedReason": "4-day",
     "expect": [
       { "period": "A", "start": "8:25", "end": "9:50" },
       { "period": "brunch", "start": "9:50", "end": "10:05" },
@@ -745,6 +737,7 @@
     "date": "2018-01-18",
     "summary": "Alternate schedule (see below)",
     "description": "Period A (8:25-9:50)\nBrunch (9:50-10:05)\nPeriod B (10:05-11:25)\nPeriod C (11:35-12:55)\nLunch (12:55-1:35)\nPeriod F (1:35-2:55)\nDept. meetings (3:05-3:40)\n\n",
+    "expectedReason": "4-day",
     "expect": [
       { "period": "A", "start": "8:25", "end": "9:50" },
       { "period": "brunch", "start": "9:50", "end": "10:05" },
@@ -759,6 +752,7 @@
     "date": "2018-05-01",
     "summary": "Staff-Volunteer Luncheon (see alternate schedule below)",
     "description": "<p style=\"margin-top: 0px; margin-bottom: 0px; color: rgb(0, 0, 0); font-family: 'Courier New', monospace, 'Courier New', EmojiFont, 'Apple Color Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'Android Emoji', EmojiSymbols; font-size: 16px; background-color: rgb(255, 255, 255);\">Period D (8:25-9:45)</p><p style=\"margin-top: 0px; margin-bottom: 0px; color: rgb(0, 0, 0); font-family: 'Courier New', monospace, 'Courier New', EmojiFont, 'Apple Color Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'Android Emoji', EmojiSymbols; font-size: 16px; background-color: rgb(255, 255, 255);\">Brunch (9:45-10:00)</p><p style=\"margin-top: 0px; margin-bottom: 0px; color: rgb(0, 0, 0); font-family: 'Courier New', monospace, 'Courier New', EmojiFont, 'Apple Color Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'Android Emoji', EmojiSymbols; font-size: 16px; background-color: rgb(255, 255, 255);\">FlexTime (10:00-10:30)</p><p style=\"margin-top: 0px; margin-bottom: 0px; color: rgb(0, 0, 0); font-family: 'Courier New', monospace, 'Courier New', EmojiFont, 'Apple Color Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'Android Emoji', EmojiSymbols; font-size: 16px; background-color: rgb(255, 255, 255);\">Period E (10:40-11:55)</p><p style=\"margin-top: 0px; margin-bottom: 0px; color: rgb(0, 0, 0); font-family: 'Courier New', monospace, 'Courier New', EmojiFont, 'Apple Color Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'Android Emoji', EmojiSymbols; font-size: 16px; background-color: rgb(255, 255, 255);\">Lunch (11:55-12:55)</p><p style=\"margin-top: 0px; margin-bottom: 0px; color: rgb(0, 0, 0); font-family: 'Courier New', monospace, 'Courier New', EmojiFont, 'Apple Color Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'Android Emoji', EmojiSymbols; font-size: 16px; background-color: rgb(255, 255, 255);\">Period A (12:55-2:15)</p><p style=\"margin-top: 0px; margin-bottom: 0px; color: rgb(0, 0, 0); font-family: 'Courier New', monospace, 'Courier New', EmojiFont, 'Apple Color Emoji', 'Segoe UI Emoji', NotoColorEmoji, 'Segoe UI Symbol', 'Android Emoji', EmojiSymbols; font-size: 16px; background-color: rgb(255, 255, 255);\">Period G (2:25-3:40)</p>",
+    "expectedReason": "extended-lunch",
     "expect": [
       { "period": "D", "start": "8:25", "end": "9:45" },
       { "period": "brunch", "start": "9:45", "end": "10:00" },
@@ -773,6 +767,7 @@
     "date": "2018-05-29",
     "summary": "7-Period Day alternate schedule Review Day (no new content)",
     "description": "Period A (8:25-9:17)\nPeriod B (9:27-10:14)\nBrunch (10:14-10:29)\nPeriod C (10:29-11:16)\nPeriod D (11:26-12:13)\nLunch (12:13-12:57)\nPeriod E (12:57-1:44)\nPeriod F (1:54-2:41)\nPeriod G (2:51-3:38)\n",
+    "expectedReason": "review",
     "expect": [
       { "period": "A", "start": "8:25", "end": "9:17" },
       { "period": "B", "start": "9:27", "end": "10:14" },
@@ -789,6 +784,7 @@
     "date": "2017-11-16",
     "summary": "Turkey Feast  (see alternate schedule below)",
     "description": "Period E (8:25-9:45)\nBrunch (9:45-10:00)\nFlexTime (10:00-10:45)\nPeriod B (10:55-12:00)\nExtended Lunch (12:00-12:55)\nPeriod A (1:05-2:10)\nPeriod G (2:20-3:35)\n\n",
+    "expectedReason": "turkey",
     "expect": [
       { "period": "E", "start": "8:25", "end": "9:45" },
       { "period": "brunch", "start": "9:45", "end": "10:00" },
@@ -817,6 +813,7 @@
     "date": "2017-08-28",
     "summary": "Alternate schedule (see below)",
     "description": "Period A (8:25-9:50)\nBrunch (9:50-10:05)\nPeriod B (10:05-11:25)\nPeriod C (11:35-12:55)\nLunch (12:55-1:35)\nPeriod F (1:35-2:55)\nStaff Collaboration (no students) (3:05-3:40)",
+    "expectedReason": "4-day",
     "expect": [
       { "period": "A", "start": "8:25", "end": "9:50" },
       { "period": "brunch", "start": "9:50", "end": "10:05" },
@@ -831,6 +828,7 @@
     "date": "2017-10-05",
     "summary": "Alternate schedule (see below)",
     "description": "Period D (8:25-9:50)\nBrunch (9:50-10:05)\nFlexTime (10:05-11:25)\nPeriod E (11:35-12:55)\nLunch (12:55-1:35)\nPeriod G (1:35-2:55)\nBACK TO SCHOOL NIGHT (6:00-9:00pm)\n",
+    "expectedReason": "4-day",
     "expect": [
       { "period": "D", "start": "8:25", "end": "9:50" },
       { "period": "brunch", "start": "9:50", "end": "10:05" },
@@ -845,6 +843,7 @@
     "date": "2017-10-04",
     "summary": "Alternate Schedule (see below)",
     "description": "Period A (8:25-9:50)\nBrunch (9:50-10:05)\nPeriod B (10:05-11:25)\nPeriod C (11:35-12:55)\nLunch (12:55-1:35)\nPeriod F (1:35-2:55)\nStaff/Dept. meeting (3:05-3:40)\n\n",
+    "expectedReason": "4-day",
     "expect": [
       { "period": "A", "start": "8:25", "end": "9:50" },
       { "period": "brunch", "start": "9:50", "end": "10:05" },
@@ -859,6 +858,7 @@
     "date": "2017-10-12",
     "summary": "Alternate Schedule (see below)",
     "description": "Period A (8:25-9:50)\nBrunch (9:50-10:05)\nPeriod B (10:05-11:25)\nPeriod C (11:35-12:55)\nLunch (12:55-1:35)\nPeriod F (1:35-2:55)\n\n",
+    "expectedReason": "4-day",
     "expect": [
       { "period": "A", "start": "8:25", "end": "9:50" },
       { "period": "brunch", "start": "9:50", "end": "10:05" },
@@ -872,6 +872,7 @@
     "date": "2017-10-11",
     "summary": "PSAT/Grade level assemblies Alternate Schedule (see below)",
     "description": "ALL STUDENTS ATTEND, 8:30-12:00\nNo afternoon classes\nStaff Collaboration (1:00-3:45)\n\n",
+    "expectedReason": "psat",
     "expect": [
       { "period": "flex", "start": "8:30", "end": "12:00", "testing": "j", "assemblies": "fsS" },
       { "period": "collaboration", "start": "13:00", "end": "15:45" }
@@ -881,6 +882,7 @@
     "date": "2017-10-13",
     "summary": "Alternate Schedule (see below)",
     "description": "Period D (8:25-9:50)\nBrunch (9:50-10:05)\nFlexTime (10:05-11:25)\nE period (11:35-12:55)\nLunch (12:55-1:35)\nPeriod G (1:35-2:55)\n",
+    "expectedReason": "4-day",
     "expect": [
       { "period": "D", "start": "8:25", "end": "9:50" },
       { "period": "brunch", "start": "9:50", "end": "10:05" },
@@ -900,30 +902,35 @@
     "date": "2018-03-12",
     "summary": "Local Holiday",
     "description": null,
+    "expectedReason": "holiday",
     "expect": []
   },
   {
     "date": "2018-05-28",
     "summary": "MEMORIAL DAY HOLIDAY",
     "description": null,
+    "expectedReason": "holiday",
     "expect": []
   },
   {
     "date": "2018-01-15",
     "summary": "MLK Holiday",
     "description": null,
+    "expectedReason": "holiday",
     "expect": []
   },
   {
     "date": "2018-02-19",
     "summary": "President's Day Holiday",
     "description": null,
+    "expectedReason": "holiday",
     "expect": []
   },
   {
     "date": "2018-04-02",
     "summary": "Spring Break",
     "description": null,
+    "expectedReason": "break",
     "expect": []
   },
   {
@@ -936,18 +943,21 @@
     "date": "2018-01-08",
     "summary": "Staff Development Day (no students)",
     "description": null,
+    "expectedReason": "development-day",
     "expect": []
   },
   {
     "date": "2017-11-10",
     "summary": "Veterans' Day Holiday",
     "description": null,
+    "expectedReason": "holiday",
     "expect": []
   },
   {
     "date": "2017-12-22",
     "summary": "Winter Break Holiday",
     "description": null,
+    "expectedReason": "break",
     "expect": []
   }
 ]
