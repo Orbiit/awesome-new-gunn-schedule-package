@@ -2,14 +2,15 @@ const { PASSING_PERIOD_LENGTH, defaultSelf, newLineRegex } = require('./Constant
 const NormalSchedule = require('./NormalSchedule.js')
 const Periods = require('./Periods.js')
 
-const HTMLnewlineRegex = /<(p|div|br).*?>|\),? *(?=[A-Z0-9])/g
+const HTMLnewlineRegex = /<\/?(p|div|br).*?>|\),? *(?=[A-Z0-9])/g
 const noHTMLRegex = /<.*?>/g
 const noNbspRegex = /&nbsp;/g
 
 const EARLIEST_AM_HOUR = 6
 const timeGetterRegex = /\(?(1?[0-9]):([0-9]{2}) *(?:-|–) *(1?[0-9]):([0-9]{2}) *(pm)?\)?/
 
-const getPeriodLetterRegex = /\b[A-G]\b/
+// Detect PeriodE etc (2020-03-31)
+const getPeriodLetterRegex = /(?:\b|PERIOD)([A-G])\b/
 
 const selfGradeRegex = /(1?[9012](?:\s*-\s*1?[9012])?)(?:th)?|(freshmen|sophomore|junior|senior|all)/gi
 const periodSelfGradeRegex = /self for (.+?) grade|self for (freshmen|sophomore|junior|senior|all)/gi
@@ -149,16 +150,22 @@ function identifyPeriod (rawName) {
   const name = rawName.toUpperCase()
   if (name.includes('PERIOD')) {
     const letter = getPeriodLetterRegex.exec(name)
-    if (letter && Periods[letter[0]]) {
-      return Periods[letter[0]]
+    if (letter && Periods[letter[1]]) {
+      return Periods[letter[1]]
     }
   }
   if (name.includes('SELF')) {
     return Periods.SELF
+  } else if (name.includes('STAFF') || name.includes('MEETING')) {
+    // Ignore staff classes (for now); should be before flex so that
+    // "Staff Meeting, CAASPP training for all" (2020-03-11) isn't interpreted
+    // as flex
+    return null
   } else if (name.includes('FLEX') ||
     name.includes('ASSEMBL') || // To match both 'assembly' and 'assemblies'
     name.includes('ATTEND') || // Detect PSAT day (2018-10-10)
-    name.includes('TUTORIAL')) {
+    name.includes('TUTORIAL') ||
+    name.includes('CAASPP')) {
     return Periods.FLEX
   } else if (name.includes('BRUNCH') || name.includes('BREAK')) {
     return Periods.BRUNCH

@@ -8,9 +8,9 @@
   ],
   "main": "src/index.js",
   "scripts": {
-    "test": "npm run lint && mocha",
+    "test": "npm run lint && mocha --colors",
     "lint": "standard \"src/**/*.js\" \"test/**/*.js\" --verbose | snazzy",
-    "build": "webpack",
+    "build": "webpack --colors",
     "prepublishOnly": "npm test && NODE_ENV=production npm run build"
   },
   "keywords": [

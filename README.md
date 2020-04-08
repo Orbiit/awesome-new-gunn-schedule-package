@@ -256,4 +256,7 @@ npm run build
 
 # If you're on Windows, you need this to be able to run prepublishOnly (to set NODE_ENV=production):
 npm install -g win-node-env
+
+# Publish to NPM
+npm publish
 ```
