@@ -14,11 +14,11 @@ const periodMapping = {
   flex: Periods.FLEX,
   brunch: Periods.BRUNCH,
   lunch: Periods.LUNCH,
+  meetings: Periods.MEETINGS,
+  collaboration: Periods.COLLABORATION,
 
   // Ignore unsupported periods
   H: null,
-  meetings: null,
-  collaboration: null,
   unknown: null
 }
 

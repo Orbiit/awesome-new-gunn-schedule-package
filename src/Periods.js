@@ -10,7 +10,9 @@ const Periods = {
   BRUNCH: 'b',
   LUNCH: 'l',
   FLEX: 'f',
-  SELF: 's'
+  SELF: 's',
+  MEETINGS: 'm',
+  COLLABORATION: 'c'
 }
 
 module.exports = Periods

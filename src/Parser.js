@@ -165,9 +165,8 @@ function identifyPeriod (rawName) {
   } else if (name.includes('MEETING')) {
     // Ignore staff classes (for now); should be before flex so that
     // "Staff Meeting, CAASPP training for all" (2020-03-11) isn't interpreted
-    // as flex; not looking for "STAFF" because "Staff Holiday Lunch in Bow Gym"
-    // (2017-12-07)
-    return null
+    // as flex
+    return Periods.MEETINGS
   } else if (name.includes('FLEX') ||
     name.includes('ASSEMBL') || // To match both 'assembly' and 'assemblies'
     name.includes('ATTEND') || // Detect PSAT day (2018-10-10)
@@ -179,6 +178,8 @@ function identifyPeriod (rawName) {
   } else if (name.includes('UNCH') || name.includes('TURKEY')) {
     // 'UNCH' to match 'unch' (2019-03-26)
     return Periods.LUNCH
+  } else if (name.includes('COLLAB')) {
+    return Periods.COLLABORATION
   } else {
     return null
   }
