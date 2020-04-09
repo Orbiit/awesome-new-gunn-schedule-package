@@ -6,7 +6,7 @@
     "expectedReason": "extended-lunch",
     "expect": [
       { "period": "E", "start": "8:25", "end": "9:45" },
-      { "period": "brunch", "start": "9:45", "end": "10:00" },
+      { "period": "brunch", "start": "9:45", "end": "9:50" },
       { "period": "flex", "start": "10:00", "end": "10:45" },
       { "period": "B", "start": "10:55", "end": "12:00" },
       { "period": "lunch", "start": "12:00", "end": "12:55" },
@@ -22,10 +22,10 @@
     "expect": [
       { "period": "A", "start": "8:25", "end": "9:17" },
       { "period": "B", "start": "9:27", "end": "10:14" },
-      { "period": "brunch", "start": "10:14", "end": "10:29" },
+      { "period": "brunch", "start": "10:14", "end": "10:19" },
       { "period": "C", "start": "10:29", "end": "11:16" },
       { "period": "D", "start": "11:26", "end": "12:13" },
-      { "period": "lunch", "start": "12:13", "end": "12:57" },
+      { "period": "lunch", "start": "12:13", "end": "12:47" },
       { "period": "E", "start": "12:57", "end": "13:44" },
       { "period": "F", "start": "13:54", "end": "14:41" },
       { "period": "G", "start": "14:51", "end": "15:38" }
@@ -38,9 +38,9 @@
     "expectedReason": "finals",
     "expect": [
       { "period": "B", "start": "8:30", "end": "10:10", "finals": true },
-      { "period": "brunch", "start": "10:10", "end": "10:25" },
+      { "period": "brunch", "start": "10:10", "end": "10:20" },
       { "period": "D", "start": "10:30", "end": "12:10", "finals": true },
-      { "period": "brunch", "start": "12:10", "end": "12:40" },
+      { "period": "brunch", "start": "12:10", "end": "12:35" },
       { "period": ["0", "H"], "start": "12:45", "end": "14:25", "finals": true }
     ]
   },
@@ -51,9 +51,9 @@
     "expectedReason": "finals",
     "expect": [
       { "period": "A", "start": "8:30", "end": "10:10", "finals": true },
-      { "period": "brunch", "start": "10:10", "end": "10:25" },
+      { "period": "brunch", "start": "10:10", "end": "10:20" },
       { "period": "C", "start": "10:30", "end": "12:10", "finals": true },
-      { "period": "lunch", "start": "12:10", "end": "12:40" },
+      { "period": "lunch", "start": "12:10", "end": "12:35" },
       { "period": "G", "start": "12:45", "end": "14:25", "finals": true }
     ]
   },
@@ -75,10 +75,10 @@
     "expectedReason": "4-day",
     "expect": [
       { "period": "A", "start": "8:25", "end": "9:50" },
-      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "brunch", "start": "9:50", "end": "9:55" },
       { "period": "B", "start": "10:05", "end": "11:25" },
       { "period": "C", "start": "11:35", "end": "12:55" },
-      { "period": "lunch", "start": "12:55", "end": "13:35" },
+      { "period": "lunch", "start": "12:55", "end": "13:25" },
       { "period": "F", "start": "13:35", "end": "14:55" },
       { "period": "collaboration", "start": "15:05", "end": "15:40" }
     ]
@@ -90,10 +90,10 @@
     "expectedReason": "4-day",
     "expect": [
       { "period": "D", "start": "8:25", "end": "9:50" },
-      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "brunch", "start": "9:50", "end": "9:55" },
       { "period": "flex", "start": "10:05", "end": "11:25" },
       { "period": "E", "start": "11:35", "end": "12:55" },
-      { "period": "lunch", "start": "12:55", "end": "13:35" },
+      { "period": "lunch", "start": "12:55", "end": "13:25" },
       { "period": "G", "start": "13:35", "end": "14:55" }
     ]
   },
@@ -104,10 +104,10 @@
     "expectedReason": "4-day",
     "expect": [
       { "period": "A", "start": "8:25", "end": "9:50" },
-      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "brunch", "start": "9:50", "end": "9:55" },
       { "period": "B", "start": "10:05", "end": "11:25" },
       { "period": "C", "start": "11:35", "end": "12:55" },
-      { "period": "lunch", "start": "12:55", "end": "13:35" },
+      { "period": "lunch", "start": "12:55", "end": "13:25" },
       { "period": "F", "start": "13:35", "end": "14:55" },
       { "period": "meetings", "start": "15:05", "end": "15:40" }
     ]
@@ -119,10 +119,10 @@
     "expectedReason": "4-day",
     "expect": [
       { "period": "D", "start": "8:25", "end": "9:50" },
-      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "brunch", "start": "9:50", "end": "9:55" },
       { "period": "flex", "start": "10:05", "end": "11:25" },
       { "period": "E", "start": "11:35", "end": "12:55" },
-      { "period": "lunch", "start": "12:55", "end": "13:35" },
+      { "period": "lunch", "start": "12:55", "end": "13:25" },
       { "period": "G", "start": "13:35", "end": "14:55" },
       { "period": "meetings", "start": "15:05", "end": "15:45" }
     ]
@@ -135,10 +135,10 @@
     "expect": [
       { "period": "A", "start": "8:25", "end": "9:10", "assemblies": "f" },
       { "period": "B", "start": "9:20", "end": "10:00", "assemblies": "f" },
-      { "period": "brunch", "start": "10:00", "end": "10:15" },
+      { "period": "brunch", "start": "10:00", "end": "10:05" },
       { "period": "C", "start": "10:15", "end": "10:55", "assemblies": "S" },
       { "period": "D", "start": "11:05", "end": "11:45", "assemblies": "S" },
-      { "period": "lunch", "start": "11:45", "end": "12:25" },
+      { "period": "lunch", "start": "11:45", "end": "12:15" },
       { "period": "F", "start": "12:25", "end": "13:05", "assemblies": "j" },
       { "period": "G", "start": "13:15", "end": "13:55", "assemblies": "j" },
       { "period": "collaboration", "start": "14:15", "end": "15:30" }
@@ -152,9 +152,9 @@
     "expect": [
       { "period": "E", "start": "8:25", "end": "9:10", "assemblies": "s" },
       { "period": "flex", "start": "9:20", "end": "10:00", "assemblies": "s", "self": "f" },
-      { "period": "brunch", "start": "10:00", "end": "10:15" },
+      { "period": "brunch", "start": "10:00", "end": "10:05" },
       { "period": "D", "start": "10:15", "end": "11:35" },
-      { "period": "lunch", "start": "11:35", "end": "12:15" },
+      { "period": "lunch", "start": "11:35", "end": "12:05" },
       { "period": "A", "start": "12:15", "end": "13:35" },
       { "period": "G", "start": "13:45", "end": "15:05" }
     ]
@@ -165,10 +165,10 @@
     "description": "<p>Period B (8:25-9:50)</p><p>Brunch (9:50-10:05)</p><p>Period C (10:05-11:25)</p><p>Period E (11:35-12:55)</p><p>Lunch (12:55-1:35)</p><p>Period F (1:35-2:55)</p><p>Staff Meeting (3:05-3:45)</p>",
     "expect": [
       { "period": "B", "start": "8:25", "end": "9:50" },
-      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "brunch", "start": "9:50", "end": "9:55" },
       { "period": "C", "start": "10:05", "end": "11:25" },
       { "period": "E", "start": "11:35", "end": "12:55" },
-      { "period": "lunch", "start": "12:55", "end": "13:35" },
+      { "period": "lunch", "start": "12:55", "end": "13:25" },
       { "period": "F", "start": "13:35", "end": "14:55" },
       { "period": "meetings", "start": "15:05", "end": "15:45" }
     ]
@@ -179,10 +179,10 @@
     "description": "Period E (8:25-9:25)\nBrunch (9:25-9:40)     \nPeriod B (9:40-10:55)\nPeriod C (11:05-12:20)\nLunch (12:20-1:00)\nPeriod A (1:00-2:15)\nPeriod G (2:25-3:40)                                         ",
     "expect": [
       { "period": "E", "start": "8:25", "end": "9:25" },
-      { "period": "brunch", "start": "9:25", "end": "9:40" },
+      { "period": "brunch", "start": "9:25", "end": "9:30" },
       { "period": "B", "start": "9:40", "end": "10:55" },
       { "period": "C", "start": "11:05", "end": "12:20" },
-      { "period": "lunch", "start": "12:20", "end": "13:00" },
+      { "period": "lunch", "start": "12:20", "end": "12:50" },
       { "period": "A", "start": "13:00", "end": "14:15" },
       { "period": "G", "start": "14:25", "end": "15:40" }
     ]
@@ -194,10 +194,10 @@
     "expectedReason": "caaspp",
     "expect": [
       { "period": "C", "start": "8:25", "end": "9:25" },
-      { "period": "brunch", "start": "9:25", "end": "9:45" },
+      { "period": "brunch", "start": "9:25", "end": "9:35" },
       { "period": "flex", "start": "9:45", "end": "11:45", "testing": "j" },
       { "period": "D", "start": "11:55", "end": "12:50" },
-      { "period": "lunch", "start": "12:50", "end": "13:30" },
+      { "period": "lunch", "start": "12:50", "end": "13:20" },
       { "period": "G", "start": "13:30", "end": "14:25" },
       { "period": "collaboration", "start": "14:35", "end": "15:35" }
     ]
@@ -209,10 +209,10 @@
     "expectedReason": "caaspp",
     "expect": [
       { "period": "A", "start": "8:25", "end": "9:25" },
-      { "period": "brunch", "start": "9:25", "end": "9:45" },
+      { "period": "brunch", "start": "9:25", "end": "9:35" },
       { "period": "flex", "start": "9:45", "end": "11:45", "testing": "j" },
       { "period": "B", "start": "11:55", "end": "12:50" },
-      { "period": "lunch", "start": "12:50", "end": "13:30" },
+      { "period": "lunch", "start": "12:50", "end": "13:20" },
       { "period": "F", "start": "13:30", "end": "14:25" },
       { "period": "collaboration", "start": "14:35", "end": "15:35" }
     ]
@@ -223,7 +223,7 @@
     "description": "Period D (8:25-9:45)\nBrunch (9:45-10:00)     \nPeriod E (10:00-11:15)\nPeriod F (11:25-12:40)",
     "expect": [
       { "period": "D", "start": "8:25", "end": "9:45" },
-      { "period": "brunch", "start": "9:45", "end": "10:00" },
+      { "period": "brunch", "start": "9:45", "end": "9:50" },
       { "period": "E", "start": "10:00", "end": "11:15" },
       { "period": "F", "start": "11:25", "end": "12:40" }
     ]
@@ -235,10 +235,10 @@
     "expectedReason": "4-day",
     "expect": [
       { "period": "D", "start": "8:25", "end": "9:50" },
-      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "brunch", "start": "9:50", "end": "9:55" },
       { "period": "flex", "start": "10:05", "end": "11:25" },
       { "period": "E", "start": "11:35", "end": "12:55" },
-      { "period": "lunch", "start": "12:55", "end": "13:35" },
+      { "period": "lunch", "start": "12:55", "end": "13:25" },
       { "period": "G", "start": "13:35", "end": "14:55" }
     ]
   },
@@ -249,10 +249,10 @@
     "expectedReason": "4-day",
     "expect": [
       { "period": "A", "start": "8:25", "end": "9:50" },
-      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "brunch", "start": "9:50", "end": "9:55" },
       { "period": "B", "start": "10:05", "end": "11:25" },
       { "period": "C", "start": "11:35", "end": "12:55" },
-      { "period": "lunch", "start": "12:55", "end": "13:35" },
+      { "period": "lunch", "start": "12:55", "end": "13:25" },
       { "period": "F", "start": "13:35", "end": "14:55" }
     ]
   },
@@ -263,10 +263,10 @@
     "expectedReason": "4-day",
     "expect": [
       { "period": "D", "start": "8:25", "end": "9:50" },
-      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "brunch", "start": "9:50", "end": "9:55" },
       { "period": "flex", "start": "10:05", "end": "11:00" },
       { "period": "E", "start": "11:10", "end": "12:30" },
-      { "period": "lunch", "start": "12:30", "end": "13:35" },
+      { "period": "lunch", "start": "12:30", "end": "13:25" },
       { "period": "G", "start": "13:35", "end": "14:55" },
       { "period": "meetings", "start": "15:05", "end": "15:45" }
     ]
@@ -278,10 +278,10 @@
     "expectedReason": "4-day",
     "expect": [
       { "period": "A", "start": "8:25", "end": "9:50" },
-      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "brunch", "start": "9:50", "end": "9:55" },
       { "period": "B", "start": "10:05", "end": "11:25" },
       { "period": "C", "start": "11:35", "end": "12:55" },
-      { "period": "lunch", "start": "12:55", "end": "13:35" },
+      { "period": "lunch", "start": "12:55", "end": "13:25" },
       { "period": "F", "start": "13:35", "end": "14:55" }
     ]
   },
@@ -292,7 +292,7 @@
     "expectedReason": "caaspp",
     "expect": [
       { "period": "flex", "start": "8:25", "end": "10:00", "testing": "j" },
-      { "period": "brunch", "start": "10:00", "end": "10:15" },
+      { "period": "brunch", "start": "10:00", "end": "10:05" },
       { "period": "flex", "start": "10:15", "end": "12:15", "testing": "j" },
       { "period": "collaboration", "start": "12:55", "end": "15:30" }
     ]
@@ -304,10 +304,10 @@
     "expectedReason": "extended-lunch",
     "expect": [
       { "period": "E", "start": "8:25", "end": "9:50" },
-      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "brunch", "start": "9:50", "end": "9:55" },
       { "period": "flex", "start": "10:05", "end": "10:35" },
       { "period": "B", "start": "10:45", "end": "11:55" },
-      { "period": "lunch", "start": "11:55", "end": "12:55" },
+      { "period": "lunch", "start": "11:55", "end": "12:45" },
       { "period": "A", "start": "12:55", "end": "14:05" },
       { "period": "G", "start": "14:15", "end": "15:35" }
     ]
@@ -318,10 +318,10 @@
     "description": "<p><i>&nbsp; &nbsp;Tuesday,April 10</i><br></p><p><span>Period D (8:25-9:45)</span></p><p><span>Brunch (9:45-10:00)</span></p><p><span>Period E (10:00-11:15)</span></p><p><span>Period B (11:25-12:25)</span></p><p><span>Lunch (12:25-1:05)</span></p><p><span>Period A (1:05-2:05)</span></p><p><span>Period G (2:15-3:30)</span></p><p><span>&nbsp;</span></p>",
     "expect": [
       { "period": "D", "start": "8:25", "end": "9:45" },
-      { "period": "brunch", "start": "9:45", "end": "10:00" },
+      { "period": "brunch", "start": "9:45", "end": "9:50" },
       { "period": "E", "start": "10:00", "end": "11:15" },
       { "period": "B", "start": "11:25", "end": "12:25" },
-      { "period": "lunch", "start": "12:25", "end": "13:05" },
+      { "period": "lunch", "start": "12:25", "end": "12:55" },
       { "period": "A", "start": "13:05", "end": "14:05" },
       { "period": "G", "start": "14:15", "end": "15:30" }
     ]
@@ -333,11 +333,11 @@
     "expectedReason": "assemblies",
     "expect": [
       { "period": "C", "start": "8:25", "end": "9:30" },
-      { "period": "brunch", "start": "9:30", "end": "9:45" },
+      { "period": "brunch", "start": "9:30", "end": "9:35" },
       { "period": "flex", "start": "9:45", "end": "10:45", "assemblies": "f", "testing": "S" },
       { "period": "flex", "start": "10:55", "end": "11:55", "assemblies": "s", "testing": "S", "self": "f" },
       { "period": "flex", "start": "12:05", "end": "13:05", "assemblies": "jS" },
-      { "period": "lunch", "start": "13:05", "end": "13:45" },
+      { "period": "lunch", "start": "13:05", "end": "13:35" },
       { "period": "F", "start": "13:45", "end": "14:45" },
       { "period": "meetings", "start": "15:00", "end": "15:45" }
     ]
@@ -348,10 +348,10 @@
     "description": "<p><i>&nbsp; &nbsp;Thursday,April 12</i><br></p><p><span>Period D (8:25-9:30)</span></p><p><span>Brunch (9:30-9:45)</span></p><p><span>Period E (9:45-10:45)</span></p><p><span>Period B (10:55-12:05)</span></p><p><span>Lunch (12:05-12:45)</span></p><p><span>Period A (12:45-1:55)</span></p><p><span>Period G (2:05-3:05)</span></p><p><span>Optional Tutorial (3:10-3:40)</span></p><p><span>&nbsp;</span></p><p><i>&nbsp; &nbsp;</i></p>",
     "expect": [
       { "period": "D", "start": "8:25", "end": "9:30" },
-      { "period": "brunch", "start": "9:30", "end": "9:45" },
+      { "period": "brunch", "start": "9:30", "end": "9:35" },
       { "period": "E", "start": "9:45", "end": "10:45" },
       { "period": "B", "start": "10:55", "end": "12:05" },
-      { "period": "lunch", "start": "12:05", "end": "12:45" },
+      { "period": "lunch", "start": "12:05", "end": "12:35" },
       { "period": "A", "start": "12:45", "end": "13:55" },
       { "period": "G", "start": "14:05", "end": "15:05" },
       { "period": "flex", "start": "15:10", "end": "15:40" }
@@ -363,10 +363,10 @@
     "description": "<span style=\"color: rgb(0, 0, 0); font-family: Arial, sans-serif; font-size: 12px; white-space: pre-wrap; background-color: rgb(255, 255, 255);\">Period A (8:25-9:50)Brunch (9:50-10:05)Period B (10:05-11:25)Period C (11:35-12:55)Lunch (12:55-1:35)Period F (1:35-2:55)</span>",
     "expect": [
       { "period": "A", "start": "8:25", "end": "9:50" },
-      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "brunch", "start": "9:50", "end": "9:55" },
       { "period": "B", "start": "10:05", "end": "11:25" },
       { "period": "C", "start": "11:35", "end": "12:55" },
-      { "period": "lunch", "start": "12:55", "end": "13:35" },
+      { "period": "lunch", "start": "12:55", "end": "13:25" },
       { "period": "F", "start": "13:35", "end": "14:55" }
     ]
   },
@@ -377,10 +377,10 @@
     "expectedReason": "4-day",
     "expect": [
       { "period": "D", "start": "8:25", "end": "9:50" },
-      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "brunch", "start": "9:50", "end": "9:55" },
       { "period": "flex", "start": "10:05", "end": "11:00", "self": "fs" },
       { "period": "E", "start": "11:10", "end": "12:30" },
-      { "period": "lunch", "start": "12:30", "end": "13:35" },
+      { "period": "lunch", "start": "12:30", "end": "13:25" },
       { "period": "G", "start": "13:35", "end": "14:55" },
       { "period": "unknown", "start": "13:35", "end": "14:55", "name": "BACK TO SCHOOL NIGHT" }
     ]
@@ -407,11 +407,11 @@
     "expectedReason": "assemblies",
     "expect": [
       { "period": "D", "start": "8:25", "end": "9:50" },
-      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "brunch", "start": "9:50", "end": "9:55" },
       { "period": "flex", "start": "10:05", "end": "10:40", "assemblies": "fs" },
       { "period": "flex", "start": "10:50", "end": "11:25", "assemblies": "jS" },
       { "period": "E", "start": "11:35", "end": "12:55" },
-      { "period": "lunch", "start": "12:55", "end": "13:35" },
+      { "period": "lunch", "start": "12:55", "end": "13:25" },
       { "period": "G", "start": "13:35", "end": "14:55" }
     ]
   },
@@ -428,10 +428,10 @@
     "expectedReason": "4-day",
     "expect": [
       { "period": "A", "start": "8:25", "end": "9:50" },
-      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "brunch", "start": "9:50", "end": "9:55" },
       { "period": "B", "start": "10:05", "end": "11:25" },
       { "period": "C", "start": "11:35", "end": "12:55" },
-      { "period": "lunch", "start": "12:55", "end": "13:35" },
+      { "period": "lunch", "start": "12:55", "end": "13:25" },
       { "period": "F", "start": "13:35", "end": "14:55" }
     ]
   },
@@ -443,9 +443,9 @@
     "expect": [
       { "period": "D", "start": "8:25", "end": "9:50" },
       { "period": "D", "start": "9:50", "end": "11:10" },
-      { "period": "brunch", "start": "11:10", "end": "11:25" },
+      { "period": "brunch", "start": "11:10", "end": "11:15" },
       { "period": "E", "start": "11:25", "end": "12:45" },
-      { "period": "lunch", "start": "12:45", "end": "13:25" },
+      { "period": "lunch", "start": "12:45", "end": "13:15" },
       { "period": "G", "start": "13:25", "end": "14:50" }
     ]
   },
@@ -456,10 +456,10 @@
     "expectedReason": "caaspp",
     "expect": [
       { "period": "A", "start": "8:25", "end": "9:25" },
-      { "period": "brunch", "start": "9:25", "end": "9:45" },
+      { "period": "brunch", "start": "9:25", "end": "9:35" },
       { "period": "flex", "start": "9:45", "end": "11:45", "testing": "sj" },
       { "period": "B", "start": "11:55", "end": "12:50" },
-      { "period": "lunch", "start": "12:50", "end": "13:30" },
+      { "period": "lunch", "start": "12:50", "end": "13:20" },
       { "period": "F", "start": "13:30", "end": "14:25" },
       { "period": "collaboration", "start": "14:35", "end": "15:35" }
     ]
@@ -471,11 +471,11 @@
     "expectedReason": "caaspp",
     "expect": [
       { "period": "C", "start": "8:25", "end": "9:25" },
-      { "period": "brunch", "start": "9:25", "end": "9:45" },
+      { "period": "brunch", "start": "9:25", "end": "9:35" },
       { "period": "flex", "start": "9:45", "end": "10:40", "testing": "j", "self": "f" },
       { "period": "flex", "start": "10:50", "end": "11:45", "testing": "j", "self": "s" },
       { "period": "D", "start": "11:55", "end": "12:50" },
-      { "period": "lunch", "start": "12:50", "end": "13:30" },
+      { "period": "lunch", "start": "12:50", "end": "13:20" },
       { "period": "G", "start": "13:30", "end": "14:25" },
       { "period": "collaboration", "start": "14:35", "end": "15:35" }
     ]
@@ -487,7 +487,7 @@
     "expectedReason": "caaspp",
     "expect": [
       { "period": "flex", "start": "8:25", "end": "10:00", "testing": "j" },
-      { "period": "brunch", "start": "10:00", "end": "10:15" },
+      { "period": "brunch", "start": "10:00", "end": "10:05" },
       { "period": "flex", "start": "10:15", "end": "12:15", "testing": "j" },
       { "period": "lunch", "start": "12:15", "end": "13:05" },
       { "period": "collaboration", "start": "13:15", "end": "15:30" }
@@ -512,7 +512,7 @@
       { "period": "unknown", "start": "8:25", "end": "9:50", "name": "AMC Math Test for test-takers only" },
       { "period": "E", "start": "10:00", "end": "11:08" },
       { "period": "B", "start": "11:18", "end": "12:26" },
-      { "period": "lunch", "start": "12:26", "end": "13:09" },
+      { "period": "lunch", "start": "12:26", "end": "12:59" },
       { "period": "A", "start": "13:09", "end": "14:17" },
       { "period": "G", "start": "14:27", "end": "15:35" }
     ]
@@ -525,11 +525,11 @@
     "expectedReason": "assemblies",
     "expect": [
       { "period": "D", "start": "8:25", "end": "9:50" },
-      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "brunch", "start": "9:50", "end": "9:55" },
       { "period": "flex", "start": "10:05", "end": "10:40", "assemblies": "fs" },
       { "period": "flex", "start": "10:50", "end": "11:25", "assemblies": "jS" },
       { "period": "E", "start": "11:35", "end": "12:55" },
-      { "period": "lunch", "start": "12:55", "end": "13:35" },
+      { "period": "lunch", "start": "12:55", "end": "13:25" },
       { "period": "G", "start": "13:35", "end": "14:55" }
     ]
   },
@@ -540,11 +540,11 @@
     "expectedReason": "assemblies",
     "expect": [
       { "period": "D", "start": "8:25", "end": "9:50" },
-      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "brunch", "start": "9:50", "end": "9:55" },
       { "period": "flex", "start": "10:05", "end": "10:40", "assemblies": "fs", "self": "j" },
       { "period": "flex", "start": "10:50", "end": "11:25", "assemblies": "jS", "self": "fs" },
       { "period": "E", "start": "11:35", "end": "12:55" },
-      { "period": "lunch", "start": "12:55", "end": "13:35" },
+      { "period": "lunch", "start": "12:55", "end": "13:25" },
       { "period": "G", "start": "13:35", "end": "14:55" }
     ]
   },
@@ -555,9 +555,9 @@
     "expectedReason": "caaspp",
     "expect": [
       { "period": "B", "start": "8:25", "end": "9:20" },
-      { "period": "brunch", "start": "9:20", "end": "9:40" },
+      { "period": "brunch", "start": "9:20", "end": "9:30" },
       { "period": "flex", "start": "9:40", "end": "11:40", "testing": "S", "self": "fsj" },
-      { "period": "lunch", "start": "11:40", "end": "12:20" },
+      { "period": "lunch", "start": "11:40", "end": "12:10" },
       { "period": "flex", "start": "12:20", "end": "14:20", "testing": "s" },
       { "period": "A", "start": "14:35", "end": "15:25" }
     ]
@@ -569,10 +569,10 @@
     "expectedReason": "caaspp",
     "expect": [
       { "period": "C", "start": "8:25", "end": "9:20" },
-      { "period": "brunch", "start": "9:20", "end": "9:40" },
+      { "period": "brunch", "start": "9:20", "end": "9:30" },
       { "period": "flex", "start": "9:40", "end": "11:40", "testing": "j" },
       { "period": "D", "start": "11:55", "end": "12:45" },
-      { "period": "lunch", "start": "12:45", "end": "13:25" },
+      { "period": "lunch", "start": "12:45", "end": "13:15" },
       { "period": "F", "start": "13:25", "end": "14:15" },
       { "period": "custom", "start": "14:25", "end": "15:25", "name": "WASC Focus Groups" }
     ]
@@ -584,9 +584,9 @@
     "expectedReason": "caaspp",
     "expect": [
       { "period": "E", "start": "8:25", "end": "9:20" },
-      { "period": "brunch", "start": "9:20", "end": "9:40" },
+      { "period": "brunch", "start": "9:20", "end": "9:30" },
       { "period": "flex", "start": "9:40", "end": "11:40", "testing": "j" },
-      { "period": "lunch", "start": "11:40", "end": "12:20" },
+      { "period": "lunch", "start": "11:40", "end": "12:10" },
       { "period": "flex", "start": "12:20", "end": "14:20", "testing": "j" },
       { "period": "G", "start": "14:35", "end": "15:25" }
     ]
@@ -598,9 +598,9 @@
     "expectedReason": "caaspp",
     "expect": [
       { "period": "B", "start": "8:25", "end": "9:35" },
-      { "period": "brunch", "start": "9:35", "end": "9:55" },
+      { "period": "brunch", "start": "9:35", "end": "9:45" },
       { "period": "flex", "start": "9:55", "end": "11:55", "testing": "j" },
-      { "period": "lunch", "start": "11:55", "end": "12:50" },
+      { "period": "lunch", "start": "11:55", "end": "12:40" },
       { "period": "A", "start": "12:50", "end": "14:00" },
       { "period": "F", "start": "14:10", "end": "15:15" }
     ]
@@ -611,10 +611,10 @@
     "description": "<p>Period C (8:25-9:35)</p><p>Brunch (9:35-9:50)</p><p>Period D (9:50-10:55)</p><p>Period E (11:05-12:10)</p><p>Lunch (12:10-12:50)</p>Period G (12:50-1:55)&nbsp; &nbsp;&nbsp;",
     "expect": [
       { "period": "C", "start": "8:25", "end": "9:35" },
-      { "period": "brunch", "start": "9:35", "end": "9:50" },
+      { "period": "brunch", "start": "9:35", "end": "9:40" },
       { "period": "D", "start": "9:50", "end": "10:55" },
       { "period": "E", "start": "11:05", "end": "12:10" },
-      { "period": "lunch", "start": "12:10", "end": "12:50" },
+      { "period": "lunch", "start": "12:10", "end": "12:40" },
       { "period": "G", "start": "12:50", "end": "13:55" }
     ]
   },
@@ -625,10 +625,10 @@
     "expectedReason": "assemblies",
     "expect": [
       { "period": "D", "start": "8:25", "end": "9:50" },
-      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "brunch", "start": "9:50", "end": "9:55" },
       { "period": "flex", "start": "10:05", "end": "11:25", "assemblies": "fsj" },
       { "period": "E", "start": "11:35", "end": "12:55" },
-      { "period": "lunch", "start": "12:55", "end": "13:35" },
+      { "period": "lunch", "start": "12:55", "end": "13:25" },
       { "period": "G", "start": "13:35", "end": "14:55" }
     ]
   },
@@ -639,10 +639,10 @@
     "expectedReason": "4-day",
     "expect": [
       { "period": "D", "start": "8:25", "end": "9:50" },
-      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "brunch", "start": "9:50", "end": "9:55" },
       { "period": "flex", "start": "10:05", "end": "11:25" },
       { "period": "E", "start": "11:35", "end": "12:55" },
-      { "period": "lunch", "start": "12:55", "end": "13:35" },
+      { "period": "lunch", "start": "12:55", "end": "13:25" },
       { "period": "G", "start": "13:35", "end": "14:55" }
     ]
   },
@@ -654,7 +654,7 @@
     "expect": [
       { "period": "C", "start": "8:25", "end": "9:15" },
       { "period": "D", "start": "9:25", "end": "10:10" },
-      { "period": "brunch", "start": "10:10", "end": "10:25" },
+      { "period": "brunch", "start": "10:10", "end": "10:15" },
       { "period": "E", "start": "10:25", "end": "11:10" },
       { "period": "F", "start": "11:20", "end": "12:05" },
       { "period": "G", "start": "12:15", "end": "13:00" }
@@ -667,10 +667,10 @@
     "expectedReason": "4-day",
     "expect": [
       { "period": "A", "start": "8:25", "end": "9:50" },
-      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "brunch", "start": "9:50", "end": "9:55" },
       { "period": "B", "start": "10:05", "end": "11:25" },
       { "period": "C", "start": "11:35", "end": "12:55" },
-      { "period": "lunch", "start": "12:55", "end": "13:35" },
+      { "period": "lunch", "start": "12:55", "end": "13:25" },
       { "period": "F", "start": "13:35", "end": "14:55" },
       { "period": "collaboration", "start": "15:05", "end": "15:40" }
     ]
@@ -682,10 +682,10 @@
     "expectedReason": "4-day",
     "expect": [
       { "period": "D", "start": "8:25", "end": "9:50" },
-      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "brunch", "start": "9:50", "end": "9:55" },
       { "period": "flex", "start": "10:05", "end": "11:25" },
       { "period": "E", "start": "11:35", "end": "12:55" },
-      { "period": "lunch", "start": "12:55", "end": "13:35" },
+      { "period": "lunch", "start": "12:55", "end": "13:25" },
       { "period": "G", "start": "13:35", "end": "14:55" }
     ]
   },
@@ -696,10 +696,10 @@
     "expectedReason": "4-day",
     "expect": [
       { "period": "A", "start": "8:25", "end": "9:50" },
-      { "period": "brunch", "start": "9:40", "end": "10:05" },
+      { "period": "brunch", "start": "9:40", "end": "9:55" },
       { "period": "B", "start": "10:05", "end": "11:25" },
       { "period": "C", "start": "11:35", "end": "12:55" },
-      { "period": "lunch", "start": "12:55", "end": "13:35" },
+      { "period": "lunch", "start": "12:55", "end": "13:25" },
       { "period": "F", "start": "13:35", "end": "14:55" },
       { "period": "meetings", "start": "15:05", "end": "15:40" }
     ]
@@ -711,11 +711,11 @@
     "expectedReason": "assemblies",
     "expect": [
       { "period": "D", "start": "8:25", "end": "9:50" },
-      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "brunch", "start": "9:50", "end": "9:55" },
       { "period": "flex", "start": "10:05", "end": "10:40", "assemblies": "fs" },
       { "period": "flex", "start": "10:50", "end": "11:25", "assemblies": "jS" },
       { "period": "E", "start": "11:35", "end": "12:55" },
-      { "period": "lunch", "start": "12:55", "end": "13:35" },
+      { "period": "lunch", "start": "12:55", "end": "13:25" },
       { "period": "G", "start": "13:35", "end": "14:55" }
     ]
   },
@@ -726,10 +726,10 @@
     "expectedReason": "4-day",
     "expect": [
       { "period": "A", "start": "8:25", "end": "9:50" },
-      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "brunch", "start": "9:50", "end": "9:55" },
       { "period": "B", "start": "10:05", "end": "11:25" },
       { "period": "C", "start": "11:35", "end": "12:55" },
-      { "period": "lunch", "start": "12:55", "end": "13:35" },
+      { "period": "lunch", "start": "12:55", "end": "13:25" },
       { "period": "F", "start": "13:35", "end": "14:55" }
     ]
   },
@@ -740,10 +740,10 @@
     "expectedReason": "4-day",
     "expect": [
       { "period": "A", "start": "8:25", "end": "9:50" },
-      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "brunch", "start": "9:50", "end": "9:55" },
       { "period": "B", "start": "10:05", "end": "11:25" },
       { "period": "C", "start": "11:35", "end": "12:55" },
-      { "period": "lunch", "start": "12:55", "end": "13:35" },
+      { "period": "lunch", "start": "12:55", "end": "13:25" },
       { "period": "F", "start": "13:35", "end": "14:55" },
       { "period": "meetings", "start": "15:05", "end": "15:40" }
     ]
@@ -755,10 +755,10 @@
     "expectedReason": "extended-lunch",
     "expect": [
       { "period": "D", "start": "8:25", "end": "9:45" },
-      { "period": "brunch", "start": "9:45", "end": "10:00" },
+      { "period": "brunch", "start": "9:45", "end": "9:50" },
       { "period": "flex", "start": "10:00", "end": "10:30" },
       { "period": "E", "start": "10:40", "end": "11:55" },
-      { "period": "lunch", "start": "11:55", "end": "12:55" },
+      { "period": "lunch", "start": "11:55", "end": "12:45" },
       { "period": "A", "start": "12:55", "end": "14:15" },
       { "period": "G", "start": "14:25", "end": "15:40" }
     ]
@@ -771,10 +771,10 @@
     "expect": [
       { "period": "A", "start": "8:25", "end": "9:17" },
       { "period": "B", "start": "9:27", "end": "10:14" },
-      { "period": "brunch", "start": "10:14", "end": "10:29" },
+      { "period": "brunch", "start": "10:14", "end": "10:19" },
       { "period": "C", "start": "10:29", "end": "11:16" },
       { "period": "D", "start": "11:26", "end": "12:13" },
-      { "period": "lunch", "start": "12:13", "end": "12:57" },
+      { "period": "lunch", "start": "12:13", "end": "12:47" },
       { "period": "E", "start": "12:57", "end": "13:44" },
       { "period": "F", "start": "13:54", "end": "14:41" },
       { "period": "G", "start": "14:51", "end": "15:38" }
@@ -787,7 +787,7 @@
     "expectedReason": "turkey",
     "expect": [
       { "period": "E", "start": "8:25", "end": "9:45" },
-      { "period": "brunch", "start": "9:45", "end": "10:00" },
+      { "period": "brunch", "start": "9:45", "end": "9:50" },
       { "period": "flex", "start": "10:00", "end": "10:45" },
       { "period": "B", "start": "10:55", "end": "12:00" },
       { "period": "lunch", "start": "12:00", "end": "12:55" },
@@ -801,10 +801,10 @@
     "description": "Period D (8:25-9:57)\nBrunch (9:57-10:12)\nFlexTime (10:12-10:50)\nPeriod E (11:00-12:15)\nLunch (12:15-12:55)\nPeriod A (12:55-2:15)\nPeriod G (2:25-3:40)\n",
     "expect": [
       { "period": "D", "start": "8:25", "end": "9:57" },
-      { "period": "brunch", "start": "9:57", "end": "10:12" },
+      { "period": "brunch", "start": "9:57", "end": "10:02" },
       { "period": "flex", "start": "10:12", "end": "10:50" },
       { "period": "E", "start": "11:00", "end": "12:15" },
-      { "period": "lunch", "start": "12:15", "end": "12:55" },
+      { "period": "lunch", "start": "12:15", "end": "12:45" },
       { "period": "A", "start": "12:55", "end": "14:15" },
       { "period": "G", "start": "14:25", "end": "15:40" }
     ]
@@ -816,10 +816,10 @@
     "expectedReason": "4-day",
     "expect": [
       { "period": "A", "start": "8:25", "end": "9:50" },
-      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "brunch", "start": "9:50", "end": "9:55" },
       { "period": "B", "start": "10:05", "end": "11:25" },
       { "period": "C", "start": "11:35", "end": "12:55" },
-      { "period": "lunch", "start": "12:55", "end": "13:35" },
+      { "period": "lunch", "start": "12:55", "end": "13:25" },
       { "period": "F", "start": "13:35", "end": "14:55" },
       { "period": "collaboration", "start": "15:05", "end": "15:40" }
     ]
@@ -831,10 +831,10 @@
     "expectedReason": "4-day",
     "expect": [
       { "period": "D", "start": "8:25", "end": "9:50" },
-      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "brunch", "start": "9:50", "end": "9:55" },
       { "period": "flex", "start": "10:05", "end": "11:25" },
       { "period": "E", "start": "11:35", "end": "12:55" },
-      { "period": "lunch", "start": "12:55", "end": "13:35" },
+      { "period": "lunch", "start": "12:55", "end": "13:25" },
       { "period": "G", "start": "13:35", "end": "14:55" },
       { "period": "unknown", "start": "18:00", "end": "21:00", "name": "BACK TO SCHOOL NIGHT" }
     ]
@@ -846,10 +846,10 @@
     "expectedReason": "4-day",
     "expect": [
       { "period": "A", "start": "8:25", "end": "9:50" },
-      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "brunch", "start": "9:50", "end": "9:55" },
       { "period": "B", "start": "10:05", "end": "11:25" },
       { "period": "C", "start": "11:35", "end": "12:55" },
-      { "period": "lunch", "start": "12:55", "end": "13:35" },
+      { "period": "lunch", "start": "12:55", "end": "13:25" },
       { "period": "F", "start": "13:35", "end": "14:55" },
       { "period": "meetings", "start": "15:05", "end": "15:40" }
     ]
@@ -861,10 +861,10 @@
     "expectedReason": "4-day",
     "expect": [
       { "period": "A", "start": "8:25", "end": "9:50" },
-      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "brunch", "start": "9:50", "end": "9:55" },
       { "period": "B", "start": "10:05", "end": "11:25" },
       { "period": "C", "start": "11:35", "end": "12:55" },
-      { "period": "lunch", "start": "12:55", "end": "13:35" },
+      { "period": "lunch", "start": "12:55", "end": "13:25" },
       { "period": "F", "start": "13:35", "end": "14:55" }
     ]
   },
@@ -885,10 +885,10 @@
     "expectedReason": "4-day",
     "expect": [
       { "period": "D", "start": "8:25", "end": "9:50" },
-      { "period": "brunch", "start": "9:50", "end": "10:05" },
+      { "period": "brunch", "start": "9:50", "end": "9:55" },
       { "period": "flex", "start": "10:05", "end": "11:25" },
       { "period": "E", "start": "11:35", "end": "12:55" },
-      { "period": "lunch", "start": "12:55", "end": "13:35" },
+      { "period": "lunch", "start": "12:55", "end": "13:25" },
       { "period": "G", "start": "13:35", "end": "14:55" }
     ]
   },
