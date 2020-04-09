@@ -43,6 +43,8 @@ module.exports = exampleSchedules
 
             if (period.length === 0) {
               return
+            } else if (period.length === 1) {
+              period = period[0]
             }
           } else {
             period = periodMapping[period]

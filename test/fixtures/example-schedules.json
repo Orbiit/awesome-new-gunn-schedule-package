@@ -64,7 +64,7 @@
     "expectedReason": "finals",
     "expect": [
       { "period": "E", "start": "8:30", "end": "10:10", "finals": true },
-      { "period": "brunch", "start": "10:10", "end": "10:25" },
+      { "period": "brunch", "start": "10:10", "end": "10:20" },
       { "period": "F", "start": "10:30", "end": "12:10", "finals": true }
     ]
   },
@@ -378,9 +378,9 @@
     "expect": [
       { "period": "D", "start": "8:25", "end": "9:50" },
       { "period": "brunch", "start": "9:50", "end": "9:55" },
-      { "period": "flex", "start": "10:05", "end": "11:00", "self": "fs" },
-      { "period": "E", "start": "11:10", "end": "12:30" },
-      { "period": "lunch", "start": "12:30", "end": "13:25" },
+      { "period": "flex", "start": "10:05", "end": "11:25", "self": "fs" },
+      { "period": "E", "start": "11:35", "end": "12:55" },
+      { "period": "lunch", "start": "12:55", "end": "13:25" },
       { "period": "G", "start": "13:35", "end": "14:55" },
       { "period": "unknown", "start": "13:35", "end": "14:55", "name": "BACK TO SCHOOL NIGHT" }
     ]
@@ -398,7 +398,8 @@
       { "period": "E", "start": "20:00", "end": "20:10" },
       { "period": "F", "start": "20:20", "end": "20:30" },
       { "period": "G", "start": "20:40", "end": "20:50" }
-    ]
+    ],
+    "ignore": true
   },
   {
     "date": "2018-09-07",
