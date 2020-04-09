@@ -10,7 +10,7 @@ const EARLIEST_AM_HOUR = 6
 const timeGetterRegex = /\(?(1?[0-9]):([0-9]{2}) *(?:-|–) *(1?[0-9]):([0-9]{2}) *(pm)?\)?/
 
 // Detect PeriodE etc (2020-03-31)
-const getPeriodLetterRegex = /(?:\b|PERIOD)([A-G])\b/
+const getPeriodLetterRegex = /(?:\b|PERIOD)([A-G]|ZERO)\b/
 
 const selfGradeRegex = /(1?[9012](?:\s*-\s*1?[9012])?)(?:th)?|(freshmen|sophomore|junior|senior|all)/gi
 const periodSelfGradeRegex = /self for (.+?) grade|self for (freshmen|sophomore|junior|senior|all)/gi
@@ -35,7 +35,7 @@ function parseFromEvent (summary, description) {
   if (/schedule|extended|lunch/i.test(summary)) {
     // The schedule is usually in the description, so with no description,
     // there is no schedule. Usually this happens when there's a false positive.
-    if (!description) return
+    if (!description) return null
 
     // Convert weird HTML in description to plain text
     description = '\n' + description
@@ -118,7 +118,7 @@ function parseFromEvent (summary, description) {
         })
       }
     }
-    return periods.filter(pd => {
+    const schedule = periods.filter(pd => {
       if (pd._retire) return false
 
       const period = identifyPeriod(pd._raw)
@@ -137,10 +137,16 @@ function parseFromEvent (summary, description) {
       // If no period was identified, this period will not be kept.
       return period
     }).sort((a, b) => a.start - b.start)
+    if (schedule.length) {
+      return schedule
+    } else {
+      // If no periods were found, that probably means it was a false positive
+      return null
+    }
   } else if (/holiday|no\sstudents|break|development/i.test(summary)) {
     // If there's a description, this might just be some staff meeting rather
     // than a holiday.
-    if (description) return
+    if (description) return null
 
     return []
   }
@@ -156,10 +162,11 @@ function identifyPeriod (rawName) {
   }
   if (name.includes('SELF')) {
     return Periods.SELF
-  } else if (name.includes('STAFF') || name.includes('MEETING')) {
+  } else if (name.includes('MEETING')) {
     // Ignore staff classes (for now); should be before flex so that
     // "Staff Meeting, CAASPP training for all" (2020-03-11) isn't interpreted
-    // as flex
+    // as flex; not looking for "STAFF" because "Staff Holiday Lunch in Bow Gym"
+    // (2017-12-07)
     return null
   } else if (name.includes('FLEX') ||
     name.includes('ASSEMBL') || // To match both 'assembly' and 'assemblies'
