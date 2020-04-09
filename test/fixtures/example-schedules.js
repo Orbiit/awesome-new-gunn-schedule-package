@@ -48,6 +48,9 @@ module.exports = exampleSchedules
             }
           } else {
             period = periodMapping[period]
+            if (period === undefined) {
+              throw new Error(`What is this fake period "${period}"? (${date}/${summary})`)
+            }
             if (period === null) {
               return
             }
