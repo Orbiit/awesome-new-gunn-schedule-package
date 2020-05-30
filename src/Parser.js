@@ -7,7 +7,7 @@ const noHTMLRegex = /<.*?>/g
 const noNbspRegex = /&nbsp;/g
 
 const EARLIEST_AM_HOUR = 6
-const timeGetterRegex = /\(?(1?[0-9]):([0-9]{2}) *(?:-|–) *(1?[0-9]):([0-9]{2}) *(pm)?\)?/
+const timeGetterRegex = /\(?(1?[0-9])(?::([0-9]{2}))? *(?:am)? *(?:-|–) *(1?[0-9])(?::([0-9]{2}))? *(noon|pm)?\)?/
 
 // Detect PeriodE etc (2020-03-31)
 const getPeriodLetterRegex = /(?:\b|PERIOD)([A-G]|ZERO)\b/
@@ -57,8 +57,8 @@ function parseFromEvent (summary, description) {
       if (!times) continue
 
       // Key: (s|e)(H|M) = (start|end)(Hour|Minute)
-      let [sH, sM, eH, eM] = times.slice(1, 5).map(Number)
-      const pm = times[5]
+      let [sH, sM, eH, eM] = times.slice(1, 5).map(n => +n || 0)
+      const pm = times[5] === 'pm'
 
       if (sH < EARLIEST_AM_HOUR || pm) sH += 12
       if (eH < EARLIEST_AM_HOUR || pm) eH += 12

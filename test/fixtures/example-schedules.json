@@ -960,5 +960,34 @@
     "description": null,
     "expectedReason": "break",
     "expect": []
+  },
+  {
+    "date": "2020-06-02",
+    "summary": "LAST CLASS MEETING schedule (see below)",
+    "description": "Period B (11am-12noon)\nPeriod D (1-2pm)\nPeriods Zero/H (2-3pm)",
+    "expect": [
+      { "period": "B", "start": "11:00", "end": "12:00" },
+      { "period": "D", "start": "13:00", "end": "14:00" },
+      { "period": ["H", "0"], "start": "14:00", "end": "15:00" }
+    ]
+  },
+  {
+    "date": "2020-06-03",
+    "summary": "LAST CLASS MEETING schedule (see below)",
+    "description": "Period A (11am-12noon)\nPeriod C (1-2pm)\nPeriod G (2-3pm)",
+    "expect": [
+      { "period": "A", "start": "11:00", "end": "12:00" },
+      { "period": "C", "start": "13:00", "end": "14:00" },
+      { "period": "G", "start": "14:00", "end": "15:00" }
+    ]
+  },
+  {
+    "date": "2020-06-04",
+    "summary": "LAST CLASS MEETING schedule (see below)",
+    "description": "Period E (11am-12noon)\nPeriod F (1-2pm)",
+    "expect": [
+      { "period": "E", "start": "11:00", "end": "12:00" },
+      { "period": "F", "start": "13:00", "end": "14:00" }
+    ]
   }
 ]
