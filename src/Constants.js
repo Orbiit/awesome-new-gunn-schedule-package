@@ -7,7 +7,7 @@ const newLineRegex = /\r?\n/g
  * school's Google Calendar.
  * @type {Array.<string>}
  */
-const KEYWORDS = ['self', 'schedule', 'extended', 'holiday', 'no students', 'break', 'development']
+const KEYWORDS = ['self', 'schedule', 'extended', 'holiday', 'no students', 'no school', 'break', 'development']
 
 /**
  * Gunn's time zone offset (PDT during the summer) in hours. This is to convert

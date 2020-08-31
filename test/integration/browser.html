@@ -5,7 +5,7 @@
     <title>Package tester</title>
     <meta name="description" content="UMDs and things"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <script src="../dist/awesome-new-gunn-schedule-package.js" charset="utf-8"></script>
+    <script src="../../dist/awesome-new-gunn-schedule-package.js" charset="utf-8"></script>
     <style media="screen">
       body {
         background-color: black;
@@ -15,14 +15,24 @@
   </head>
   <body>
     <script>
-fetch('../api-key.json')
+fetch('../../api-key.json')
   .then(r => r.json())
   .then(async ({apiKey}) => {
     const schedule = new GunnSchedule(apiKey)
-    const year = schedule.year('2019-08-13', '2020-06-04')
-    await year.update()
-    console.log(year.get('2019-11-21').periods)
-    console.log(year)
+    {
+      const year = schedule.year('2019-08-13', '2020-06-04')
+      await year.update()
+      console.log(year, year.get('2019-11-21').periods)
+    }
+    {
+      const year = schedule.year('2020-08-17', '2021-06-03', {
+        normalSchedule: GunnSchedule.schedule2021,
+        calendarId: 'fg978mo762lqm6get2ubiab0mk0f6m2c@import.calendar.google.com',
+        defaultSelf: 0b1111
+      })
+      await year.update()
+      console.log(year.get('2020-09-04').periods)
+    }
   })
     </script>
   </body>

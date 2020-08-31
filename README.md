@@ -22,6 +22,17 @@ For the web:
 
 Then in your magic JavaScript:
 ```js
+// 2020-2021 school year
+const schedule = new GunnSchedule(apiKey)
+const year = schedule.year('2020-08-17', '2021-06-03', {
+  normalSchedule: GunnSchedule.schedule2021,
+  calendarId: 'fg978mo762lqm6get2ubiab0mk0f6m2c@import.calendar.google.com',
+  defaultSelf: 0b1111
+})
+await year.update()
+console.log(year.get('2020-09-04').periods)
+
+// 2019-2020 school year
 const schedule = new GunnSchedule(apiKey)
 const year = schedule.year('2019-08-13', '2020-06-04')
 await year.update()
@@ -44,7 +55,9 @@ someMethod('2019-07-04')
 ```ts
 new GunnSchedule(apiKey: string)
   .apiKey: string
-  .year(firstDay: UTCDate, lastDay: UTCDate): SchoolYear
+  .year(firstDay: UTCDate, lastDay: UTCDate, options?: YearOptions): SchoolYear
+GunnSchedule.schedule1920: PeriodData[][]
+GunnSchedule.schedule2021: PeriodData[][]
 GunnSchedule.Periods: Object
 GunnSchedule.normalSchedule(day: number): Period[]
 
@@ -100,11 +113,31 @@ The Google Calendar API key given in the constructor. You can change this if you
 ### Methods
 
 ```ts
-.year(firstDay: UTCDate, lastDay: UTCDate): SchoolYear
+interface PeriodData {
+  period: string
+  start: number
+  end: number
+  selfGrades?: number
+}
+interface YearOptions {
+  normalSchedule?: PeriodData[][]
+  calendarId?: string
+  defaultSelf?: number
+  timeZone?: string
+}
+
+.year(firstDay: UTCDate, lastDay: UTCDate, options?: YearOptions): SchoolYear
 ```
-Creates a `SchoolYear` with the specified dates as the first and last days of the school year.
+Creates a `SchoolYear` with the specified dates as the first and last days of the school year. For compatibility reasons, it uses the 2019-2020 school year's normal schedule settings by default.
 
 ### Static properties
+
+```ts
+.schedule1920: PeriodData[][]
+.schedule2021: PeriodData[][]
+```
+
+The normal schedules for the 2019-2020 and 2020-2021 school years, respectively. These are made so you can insert them in `GunnSchedule#year`.
 
 ```ts
 .Periods: Object
