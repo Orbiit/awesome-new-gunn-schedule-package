@@ -15,12 +15,16 @@ const boringThursday = new Date('2019-11-07').getTime()
 const turkeyFeast = new Date('2019-11-21').getTime()
 const thanksgiving = new Date('2019-11-28').getTime()
 
+const normalSelfFriday = new Date('2020-08-21').getTime()
+const alternateSelf = new Date('2020-09-02').getTime()
+const labourDay = new Date('2020-09-06').getTime()
+const gunnTogetherAlternate = new Date('2020-09-09').getTime()
+
 describe('SchoolYear', () => {
   const schedule = new GunnSchedule(apiKey)
 
-  let year
-
   describe('firstDay, lastDay', () => {
+    let year
     before(() => {
       year = schedule.year(firstDay, lastDay)
     })
@@ -36,6 +40,7 @@ describe('SchoolYear', () => {
   })
 
   describe('update(date)', () => {
+    let year
     before(() => {
       year = schedule.year(firstDay, lastDay)
       return year.update(turkeyFeast)
@@ -50,6 +55,7 @@ describe('SchoolYear', () => {
   })
 
   describe('update()', async () => {
+    let year
     before(() => {
       year = schedule.year(firstDay, lastDay)
       return year.update()
@@ -83,8 +89,31 @@ describe('SchoolYear', () => {
     })
   })
 
+  describe('2020-2021 school year', async () => {
+    let year
+    before(() => {
+      year = schedule.year(firstDay, lastDay, {
+        normalSchedule: schedule.schedule2021,
+        calendarId: 'fg978mo762lqm6get2ubiab0mk0f6m2c@import.calendar.google.com'
+      })
+      return year.update()
+    })
+    it('should know that a normal SELF this year is for all grades', () => {
+      assert.deepStrictEqual(year.get(normalSelfFriday).periods[1].selfGrades, [9, 10, 11, 12])
+    })
+    it('should know that an alternate SELF this year is for all grades', () => {
+      assert.deepStrictEqual(year.get(alternateSelf).periods[1].selfGrades, [9, 10, 11, 12])
+    })
+    it('should know that there is no school on labour day', () => {
+      assert.ok(!year.get(labourDay).school)
+    })
+    it('should identify Gunn Together on an alternate day', () => {
+      assert.ok(year.get(gunnTogetherAlternate).periods[1].period === GunnSchedule.Periods.GT)
+    })
+  })
+
   describe('Time', async () => {
-    let normalThursday
+    let normalThursday, year
     before(() => {
       year = schedule.year(firstDay, lastDay)
       return year.update()

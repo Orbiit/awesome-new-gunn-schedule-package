@@ -58,19 +58,24 @@ function simplifyEvents ({ items }) {
 }
 
 class SchoolYear {
-  constructor (gunnSchedule, firstDay, lastDay) {
+  constructor (gunnSchedule, firstDay, lastDay, {
+    normalSchedule = NormalSchedule,
+    calendarId = CALENDAR_ID,
+    timeZone = 'America/Los_Angeles'
+  } = {}) {
     this._gunnSchedule = gunnSchedule
     this.firstDay = toDate(firstDay)
     this.lastDay = toDate(lastDay)
+    this._normalSchedule = normalSchedule
     if (this.lastDay < this.firstDay) {
       throw new Error('wucky: Why would the last day be before the first day???')
     }
 
     this._gCalURLBase = 'https://www.googleapis.com/calendar/v3/calendars/' +
-      encodeURIComponent(CALENDAR_ID) +
+      encodeURIComponent(calendarId) +
       '/events?singleEvents=true&fields=' +
       encodeURIComponent('items(description,end(date,dateTime),start(date,dateTime),summary)') +
-      '&key=' + gunnSchedule.apiKey
+      '&key=' + gunnSchedule.apiKey + '&timeZone=' + timeZone
 
     this._alternates = {}
   }
@@ -146,7 +151,7 @@ class SchoolYear {
     } else {
       return new Day({
         date,
-        periods: NormalSchedule[new Date(date).getUTCDay()]
+        periods: this._normalSchedule[new Date(date).getUTCDay()]
       })
     }
   }

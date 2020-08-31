@@ -10,7 +10,7 @@ const EARLIEST_AM_HOUR = 6
 const timeGetterRegex = /\(?(1?[0-9])(?::([0-9]{2}))? *(?:am)? *(?:-|–) *(1?[0-9])(?::([0-9]{2}))? *(noon|pm)?\)?/
 
 // Detect PeriodE etc (2020-03-31)
-const getPeriodLetterRegex = /(?:\b|PERIOD)([A-G]|ZERO)\b/
+const getPeriodLetterRegex = /(?:\b|PERIOD)([A-G1-7]|ZERO)\b/
 
 const selfGradeRegex = /(1?[9012](?:\s*-\s*1?[9012])?)(?:th)?|(freshmen|sophomore|junior|senior|all)/gi
 const periodSelfGradeRegex = /self for (.+?) grade|self for (freshmen|sophomore|junior|senior|all)/gi
@@ -143,7 +143,7 @@ function parseFromEvent (summary, description) {
       // If no periods were found, that probably means it was a false positive
       return null
     }
-  } else if (/holiday|no\sstudents|break|development/i.test(summary)) {
+  } else if (/holiday|no\s(students|school)|break|development/i.test(summary)) {
     // If there's a description, this might just be some staff meeting rather
     // than a holiday.
     if (description) return null
@@ -180,6 +180,8 @@ function identifyPeriod (rawName) {
     return Periods.LUNCH
   } else if (name.includes('COLLAB')) {
     return Periods.COLLABORATION
+  } else if (name.includes('TOGETHER')) {
+    return Periods.GT
   } else {
     return null
   }
