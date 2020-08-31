@@ -63,7 +63,7 @@ describe('SchoolYear', () => {
     it('should know that a normal Thursday is not alternate', () => {
       assert.ok(!year.get(boringThursday).alternate)
     })
-    it('should know that a normal Thursday is has school', () => {
+    it('should know that a normal Thursday has school', () => {
       assert.ok(year.get(boringThursday).school)
       assert.ok(year.get(boringThursday).periods.length > 0)
     })
@@ -92,9 +92,10 @@ describe('SchoolYear', () => {
   describe('2020-2021 school year', async () => {
     let year
     before(() => {
-      year = schedule.year(firstDay, lastDay, {
-        normalSchedule: schedule.schedule2021,
-        calendarId: 'fg978mo762lqm6get2ubiab0mk0f6m2c@import.calendar.google.com'
+      year = schedule.year('2020-08-17', '2021-06-03', {
+        normalSchedule: GunnSchedule.schedule2021,
+        calendarId: 'fg978mo762lqm6get2ubiab0mk0f6m2c@import.calendar.google.com',
+        defaultSelf: 0b1111
       })
       return year.update()
     })
@@ -102,13 +103,13 @@ describe('SchoolYear', () => {
       assert.deepStrictEqual(year.get(normalSelfFriday).periods[1].selfGrades, [9, 10, 11, 12])
     })
     it('should know that an alternate SELF this year is for all grades', () => {
-      assert.deepStrictEqual(year.get(alternateSelf).periods[1].selfGrades, [9, 10, 11, 12])
+      assert.deepStrictEqual(year.get(alternateSelf).periods[2].selfGrades, [9, 10, 11, 12])
     })
     it('should know that there is no school on labour day', () => {
       assert.ok(!year.get(labourDay).school)
     })
     it('should identify Gunn Together on an alternate day', () => {
-      assert.ok(year.get(gunnTogetherAlternate).periods[1].period === GunnSchedule.Periods.GT)
+      assert.strictEqual(year.get(gunnTogetherAlternate).periods[2].period, GunnSchedule.Periods.GT)
     })
   })
 

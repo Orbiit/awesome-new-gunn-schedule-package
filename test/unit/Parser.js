@@ -2,17 +2,18 @@
 
 const assert = require('assert').strict
 
-const parseFromEvents = require('../../src/Parser.js')
+const Parser = require('../../src/Parser.js')
 const Periods = require('../../src/Periods.js')
 
 const exampleSchedules = require('../fixtures/example-schedules.js')
 
 describe('parseFromEvents', function () {
+  const parser = new Parser()
   for (const { date, summary, description, expect } of exampleSchedules) {
     if (date) continue // TEMP HACK
     describe(`An event on ${date}: ${summary}`, function () {
       // Pretend all of these schedules are on Monday
-      const parsed = parseFromEvents([{ summary, description }], 1)
+      const parsed = parser.parseFromEvents([{ summary, description }], 1)
       if (expect === null) {
         it('should return null for non-schedule related events', function () {
           assert.strictEqual(parsed, null)

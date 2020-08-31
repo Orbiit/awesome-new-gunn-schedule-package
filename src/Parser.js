@@ -1,4 +1,4 @@
-const { PASSING_PERIOD_LENGTH, defaultSelf, newLineRegex } = require('./Constants.js')
+const { PASSING_PERIOD_LENGTH, newLineRegex } = require('./Constants.js')
 const NormalSchedule = require('./NormalSchedule.js')
 const Periods = require('./Periods.js')
 
@@ -16,7 +16,13 @@ const selfGradeRegex = /(1?[9012](?:\s*-\s*1?[9012])?)(?:th)?|(freshmen|sophomor
 const periodSelfGradeRegex = /self for (.+?) grade|self for (freshmen|sophomore|junior|senior|all)/gi
 const gradeToInt = { 9: 1, 10: 2, 11: 4, 12: 8, freshmen: 1, sophomore: 2, junior: 4, senior: 8, all: 15 }
 
-function getSELFGradesFrom (text) {
+function Parser ({
+  defaultSelf
+} = {}) {
+  this.defaultSelf = defaultSelf
+}
+
+Parser.prototype.getSELFGradesFrom = function getSELFGradesFrom (text) {
   let grades = 0
   text.replace(selfGradeRegex, (match, grade) => {
     if (grade && grade.includes('-')) {
@@ -31,7 +37,7 @@ function getSELFGradesFrom (text) {
   return grades
 }
 
-function parseFromEvent (summary, description) {
+Parser.prototype.parseFromEvent = function parseFromEvent (summary, description) {
   if (/schedule|extended|lunch/i.test(summary)) {
     // The schedule is usually in the description, so with no description,
     // there is no schedule. Usually this happens when there's a false positive.
@@ -121,16 +127,16 @@ function parseFromEvent (summary, description) {
     const schedule = periods.filter(pd => {
       if (pd._retire) return false
 
-      const period = identifyPeriod(pd._raw)
+      const period = this.identifyPeriod(pd._raw)
       pd.period = period
       if (period === Periods.SELF) {
         periods._specifiesSELF = true
         periodSelfGradeRegex.lastIndex = 0
         const selfSlice = periodSelfGradeRegex.exec(pd._raw)
         if (selfSlice) {
-          pd.selfGrades = getSELFGradesFrom(selfSlice[1] || selfSlice[2]) || defaultSelf
+          pd.selfGrades = this.getSELFGradesFrom(selfSlice[1] || selfSlice[2]) || this.defaultSelf
         } else {
-          pd.selfGrades = defaultSelf
+          pd.selfGrades = this.defaultSelf
         }
       }
 
@@ -152,7 +158,7 @@ function parseFromEvent (summary, description) {
   }
 }
 
-function identifyPeriod (rawName) {
+Parser.prototype.identifyPeriod = function identifyPeriod (rawName) {
   const name = rawName.toUpperCase()
   if (name.includes('PERIOD')) {
     const letter = getPeriodLetterRegex.exec(name)
@@ -187,7 +193,7 @@ function identifyPeriod (rawName) {
   }
 }
 
-function parseFromEvents (events, day) {
+Parser.prototype.parseFromEvents = function parseFromEvents (events, day) {
   // There probably won't be an alternate schedule on the weekends.
   // (Winter break on the weekends should not be considered alternate)
   if (day === 0 || day === 6) {
@@ -199,7 +205,7 @@ function parseFromEvents (events, day) {
   let assumeFlexIsSELF = true
   for (const { summary = '', description } of events) {
     if (summary.includes('SELF') && summary.includes('grade')) {
-      const grades = getSELFGradesFrom(summary)
+      const grades = this.getSELFGradesFrom(summary)
       if (grades > 0) {
         selfGrades = grades
         continue
@@ -212,7 +218,7 @@ function parseFromEvents (events, day) {
     // Do not parse another alternate schedule if it has already been done
     if (alternateSchedule) continue
 
-    const schedule = parseFromEvent(summary, description)
+    const schedule = this.parseFromEvent(summary, description)
     if (!schedule) continue
     if (schedule.specifiesSELF) {
       assumeFlexIsSELF = false
@@ -243,7 +249,7 @@ function parseFromEvents (events, day) {
       }
     }
     return alternateSchedule
-  } else if (day === 4 ? selfGrades !== defaultSelf : selfGrades) {
+  } else if (day === 4 ? selfGrades !== this.defaultSelf : selfGrades) {
     // If it's Thursday and the SELF grades are not normal, or if it's
     // not Thursday and there for some reason is SELF
     const clonedSchedule = JSON.parse(JSON.stringify(NormalSchedule[day]))
@@ -263,4 +269,4 @@ function parseFromEvents (events, day) {
   }
 }
 
-module.exports = parseFromEvents
+module.exports = Parser

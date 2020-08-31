@@ -1,8 +1,8 @@
-const { KEYWORDS, TIME_ZONE_OFFSET, CALENDAR_ID } = require('./Constants.js')
+const { KEYWORDS, TIME_ZONE_OFFSET, CALENDAR_ID, defaultSelf: defaultSelf1920 } = require('./Constants.js')
 
 const fetch = require('node-fetch')
-const NormalSchedule = require('./NormalSchedule.js')
-const parseFromEvents = require('./Parser.js')
+const { schedule1920 } = require('./NormalSchedule.js')
+const Parser = require('./Parser.js')
 const Day = require('./Day.js')
 const { toDate } = require('./utils.js')
 
@@ -59,14 +59,16 @@ function simplifyEvents ({ items }) {
 
 class SchoolYear {
   constructor (gunnSchedule, firstDay, lastDay, {
-    normalSchedule = NormalSchedule,
+    normalSchedule = schedule1920,
     calendarId = CALENDAR_ID,
+    defaultSelf = defaultSelf1920,
     timeZone = 'America/Los_Angeles'
   } = {}) {
     this._gunnSchedule = gunnSchedule
     this.firstDay = toDate(firstDay)
     this.lastDay = toDate(lastDay)
     this._normalSchedule = normalSchedule
+    this._parser = new Parser({ defaultSelf })
     if (this.lastDay < this.firstDay) {
       throw new Error('wucky: Why would the last day be before the first day???')
     }
@@ -129,7 +131,7 @@ class SchoolYear {
           eventsByDay[event.date].push(event)
         }
         for (const [date, events] of Object.entries(eventsByDay)) {
-          const alternate = parseFromEvents(events, new Date(+date).getUTCDay())
+          const alternate = this._parser.parseFromEvents(events, new Date(+date).getUTCDay())
           this._alternates[date] = alternate || null
         }
       })

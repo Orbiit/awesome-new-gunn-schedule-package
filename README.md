@@ -25,8 +25,9 @@ Then in your magic JavaScript:
 // 2020-2021 school year
 const schedule = new GunnSchedule(apiKey)
 const year = schedule.year('2020-08-17', '2021-06-03', {
-  normalSchedule: schedule.schedule2021,
-  calendarId: 'fg978mo762lqm6get2ubiab0mk0f6m2c@import.calendar.google.com'
+  normalSchedule: GunnSchedule.schedule2021,
+  calendarId: 'fg978mo762lqm6get2ubiab0mk0f6m2c@import.calendar.google.com',
+  defaultSelf: 0b1111
 })
 await year.update()
 console.log(year.get('2020-09-04').periods)
@@ -121,12 +122,13 @@ interface PeriodData {
 interface YearOptions {
   normalSchedule?: PeriodData[][]
   calendarId?: string
+  defaultSelf?: number
   timeZone?: string
 }
 
 .year(firstDay: UTCDate, lastDay: UTCDate, options?: YearOptions): SchoolYear
 ```
-Creates a `SchoolYear` with the specified dates as the first and last days of the school year. For compatibility reasons, it uses the 2019-2020 school year's normal schedule and calendar ID by default.
+Creates a `SchoolYear` with the specified dates as the first and last days of the school year. For compatibility reasons, it uses the 2019-2020 school year's normal schedule settings by default.
 
 ### Static properties
 

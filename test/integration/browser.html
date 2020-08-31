@@ -26,11 +26,12 @@ fetch('../../api-key.json')
     }
     {
       const year = schedule.year('2020-08-17', '2021-06-03', {
-        normalSchedule: schedule.schedule2021,
-        calendarId: 'fg978mo762lqm6get2ubiab0mk0f6m2c@import.calendar.google.com'
+        normalSchedule: GunnSchedule.schedule2021,
+        calendarId: 'fg978mo762lqm6get2ubiab0mk0f6m2c@import.calendar.google.com',
+        defaultSelf: 0b1111
       })
       await year.update()
-      console.log(year, year.get('2020-09-04').periods)
+      console.log(year.get('2020-09-04').periods)
     }
   })
     </script>
